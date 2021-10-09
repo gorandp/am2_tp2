@@ -269,6 +269,8 @@ Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
 
    t = \frac {\ln 99}{0.141} \approx 32.590
 
+Por lo tanto, el tiempo que le tomará a la mitad de la población adquirir la
+enfermedad es :math:`t=32.590` unidades de tiempo.
 
 
 Gráficas
@@ -283,9 +285,14 @@ Ejercicio 2
 Enunciado
 ---------
 
+Test
+
 Desarrollo
 ----------
+
+Test
 
 Gráficas
 --------
 
+Test
