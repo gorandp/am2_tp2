@@ -65,7 +65,8 @@ En el video se debe mostrar:
 Ejercicio 1
 ===========
 
-Por Goran Prpic.
+Bronson, R. y Costa, G. (año). *Capítulo 7: Aplicaciones de las ecuaciones
+diferenciales de primer orden*. **Ecuaciones Diferenciales**. Mc Graw Hill.
 
 Enunciado
 ---------
