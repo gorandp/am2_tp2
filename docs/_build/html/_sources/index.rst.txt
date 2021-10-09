@@ -6,7 +6,8 @@
 Trabajo Practico 2
 ==================
 
-.. important:: Fecha límite de entrega: 01-11-21 (23:59 h)
+Fecha límite de entrega: 01-11-21 (23:59 h)
+
 
 Alumnos
 -------
@@ -18,28 +19,14 @@ Alumnos
 
    Completar la ingeniería de Pablo
 
-Indicaciones
-------------
-
-Forma de trabajo
-~~~~~~~~~~~~~~~~
-
-Se realiza en EQUIPO conformado por 2 o 3 estudiantes (pueden pertenecer a
-especialidades distintas)
 
 Consigna
-~~~~~~~~
+--------
 
 Preparar un **VIDEO** en el que se muestre el proceso de modelización y
 resolución, por parte de los integrantes del equipo, de **DOS PROBLEMAS**
 que se modelicen con **DISTINTOS TIPOS DE ECUACIONES DIFERENCIALES
 ORDINARIAS DE PRIMER ORDEN**.
-
-.. attention::
-
-   El enunciado del problema no debe presentar la ecuación diferencial que
-   modeliza la situación, sino que a partir de los datos del problema se
-   obtenga la modelización del este.
 
 En el video se debe mostrar:
 
@@ -51,6 +38,17 @@ En el video se debe mostrar:
    particular correspondiente.
 #. Análisis las soluciones obtenidas en función del problema.
 #. interpretación geométrica de las soluciones obtenidas.
+
+.. admonition:: Forma de trabajo
+
+   Se realiza en EQUIPO conformado por 2 o 3 estudiantes (pueden pertenecer a
+   especialidades distintas)
+
+.. attention::
+
+   El enunciado del problema no debe presentar la ecuación diferencial que
+   modeliza la situación, sino que a partir de los datos del problema se
+   obtenga la modelización del este.
 
 .. attention::
 

@@ -58,6 +58,10 @@ todo_include_todos = True
 #
 html_theme = 'sphinx_book_theme'
 
+html_title = "UTN Facultad Regional San Nicolás - Análisis Matemático 2"
+html_logo = "_static/utn-2.svg"
+html_favicon = "_static/utn-2.svg"
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
