@@ -81,9 +81,9 @@ la mitad de la población adquirir la enfermedad?
 Desarrollo
 ----------
 
-Sea :math:`N(t)` el número de ratones infectados con la enfermedad en el tiempo
+Sea :math:`R(t)` el número de ratones infectados con la enfermedad en el tiempo
 :math:`t`. Luego, se dice que en un inicio se infectan 5 ratones, por lo que se
-deduce que :math:`N(0) = 5`. Por último, sea :math:`500 - N(t)` el número de
+deduce que :math:`R(0) = 5`. Por último, sea :math:`500 - R(t)` el número de
 ratones libre de la enfermedad.
 
 Se interpreta la teoría de difusión de epidemia planteada:
@@ -95,15 +95,128 @@ Se interpreta la teoría de difusión de epidemia planteada:
 Con la siguiente ley:
 
 .. math::
+   :label: planteo-ley
 
-   \frac {dN}{dt} = k N (500 - N)
+   \frac {dR}{dt} = k R (500 - R)
+
+.. math::
+   :label: var-sep
+
+   \frac {1}{R (500 - R)} dR = k dt
+
+Vemos que la forma tomada en :math:numref:`var-sep` es la de una ecuación
+diferencial ordinaria de primer orden a variable separables.
+
+Para resolverla, primero descomponemos en fracciones simples la fracción
+del primer miembro:
+
+.. math::
+
+   \frac {A}{R} + \frac {B}{500 - R} &= \frac {A(500 - R) + B R}{R (500 - R)} \\
+                                     &= \frac {1}{R (500 - R)}
+
+Por lo tanto:
+
+.. math::
+
+   1 = A(500 - R) + B R
+
+   R=0 => A = \frac {1}{500}
+
+   R=500 => B = \frac {1}{500}
+
+Finalmente:
+
+.. math::
+   :label: frac-simple
+
+   \frac {1}{R (500 - R)} = \frac {1}{500} ( \frac {1}{R} + \frac {1}{500 - R} )
+
+Reemplazo :math:numref:`frac-simple` en :math:numref:`var-sep`.
+
+.. math::
+
+   \frac {1}{500} ( \frac {1}{R} + \frac {1}{500 - R} ) dR = k dt
+
+   ( \frac {1}{R} + \frac {1}{500 - R} ) dR = 500 k dt
+
+Integro ambos miembros
+
+.. math::
+
+   \int ( \frac {1}{R} + \frac {1}{500 - R} ) dR = 500 k \int dt
+
+.. math::
+
+   \ln |R| - \ln |500 - R| = 500kt + C_1
+
+.. math::
+
+   \ln | \frac {R}{500-R} | = 500kt + C_1
+
+.. math::
+
+   \frac {R}{500-R} = e^{500kt + C_1}
+
+.. math::
+
+   \frac {R}{500-R} = e^{500kt} e^{C_1}
+
+.. math::
+   :label: ley-ratones-general
+
+   \frac {R}{500-R} = C e^{500kt}
+
+La ecuación :math:numref:`ley-ratones-general` la dejaremos como está, ya que
+nos es de utilidad en la forma actual.
+
+Trayendo nuevamente los datos del enunciado (condiciones iniciales) sabemos
+que :math:`R(t=0) = 5`, por lo que lo reemplazamos en :math:numref:`ley-ratones-general`:
+
+.. math::
+
+   \frac {5}{500-5} = C e^{500 k * 0}
+
+.. math::
+
+   \frac {5}{495} = C
+
+.. math::
+
+   C = \frac {1}{99}
+
+Por lo que sustituyendo :math:`C` en :math:numref:`ley-ratones-general` nos
+queda:
+
+.. math::
+   :label: ley-ratones
+
+   \frac {R}{500-R} = \frac {1}{99} e^{500kt}
+
+Ahora solo nos queda averiguar la principal incógnita del problema, en la que
+debemos averiguar para qué valor de :math:`t` se cumple que :math:`R(t)=250`.
+Reemplazamos esto en :math:numref:`ley-ratones`:
+
+.. math::
+
+   \frac {250}{500-250} = \frac {1}{99} e^{500kt}
+
+.. math::
+
+   1 = \frac {1}{99} e^{500kt}
+
+.. math::
+
+   99 = e^{500kt}
+
+   \ln 99 = 500kt
+
+.. math::
+   :label: solucion-p1
+
+   t = \frac {\ln 99}{500k}
 
 
-   ejercicio_1
-
-\begin{equation}
-R_{k+1} = \frac{f^{(k+1)}(\xi)}{(k+1)!}\Delta x^{k+1}, \quad\quad x\leq \xi \leq x+\Delta x.
-\end{equation}
 
 Indices and tables
 ==================

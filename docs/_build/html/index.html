@@ -272,9 +272,9 @@ la mitad de la población adquirir la enfermedad?</p>
 </div>
 <div class="section" id="desarrollo">
 <h2>Desarrollo<a class="headerlink" href="#desarrollo" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Sea <span class="math notranslate nohighlight">\(N(t)\)</span> el número de ratones infectados con la enfermedad en el tiempo
+<p>Sea <span class="math notranslate nohighlight">\(R(t)\)</span> el número de ratones infectados con la enfermedad en el tiempo
 <span class="math notranslate nohighlight">\(t\)</span>. Luego, se dice que en un inicio se infectan 5 ratones, por lo que se
-deduce que <span class="math notranslate nohighlight">\(N(0) = 5\)</span>. Por último, sea <span class="math notranslate nohighlight">\(500 - N(t)\)</span> el número de
+deduce que <span class="math notranslate nohighlight">\(R(0) = 5\)</span>. Por último, sea <span class="math notranslate nohighlight">\(500 - R(t)\)</span> el número de
 ratones libre de la enfermedad.</p>
 <p>Se interpreta la teoría de difusión de epidemia planteada:</p>
 <blockquote>
@@ -283,31 +283,64 @@ número de ratones que tienen la enfermedad con el número que está libre de
 ésta</p>
 </div></blockquote>
 <p>Con la siguiente ley:</p>
+<div class="math notranslate nohighlight" id="equation-planteo-ley">
+<span class="eqno">(1)<a class="headerlink" href="#equation-planteo-ley" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dR}{dt} = k R (500 - R)\]</div>
+<div class="math notranslate nohighlight" id="equation-var-sep">
+<span class="eqno">(2)<a class="headerlink" href="#equation-var-sep" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {1}{R (500 - R)} dR = k dt\]</div>
+<p>Vemos que la forma tomada en <a class="reference internal" href="#equation-var-sep">(2)</a> es la de una ecuación
+diferencial ordinaria de primer orden a variable separables.</p>
+<p>Para resolverla, primero descomponemos en fracciones simples la fracción
+del primer miembro:</p>
 <div class="math notranslate nohighlight">
-\[\frac {dN}{dt} = k N (500 - N)\]</div>
-<p>Sep</p>
+\[\begin{split}\frac {A}{R} + \frac {B}{500 - R} &amp;= \frac {A(500 - R) + B R}{R (500 - R)} \\
+                                  &amp;= \frac {1}{R (500 - R)}\end{split}\]</div>
+<p>Por lo tanto:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\langle \alpha, \beta  \rangle
-\in
-\Biggl \lbrace
-{
-M,\text{ if }
-   {
-   l(\underline{x}) =
-      \frac { p(\underline{x}|M ) } { p(\underline{x}|U) }
-      \geq
-      \frac { p(U) }{ p(M) } }
-\atop
-U, \text{ otherwise }
-}\\\begin{split}(a + b)^2  &amp;=  (a + b)(a + b) \\
-           &amp;=  a^2 + 2ab + b^2\end{split}\end{aligned}\end{align} \]</div>
+\[ \begin{align}\begin{aligned}1 = A(500 - R) + B R\\R=0 =&gt; A = \frac {1}{500}\\R=500 =&gt; B = \frac {1}{500}\end{aligned}\end{align} \]</div>
+<p>Finalmente:</p>
+<div class="math notranslate nohighlight" id="equation-frac-simple">
+<span class="eqno">(3)<a class="headerlink" href="#equation-frac-simple" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {1}{R (500 - R)} = \frac {1}{500} ( \frac {1}{R} + \frac {1}{500 - R} )\]</div>
+<p>Reemplazo <a class="reference internal" href="#equation-frac-simple">(3)</a> en <a class="reference internal" href="#equation-var-sep">(2)</a>.</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}(a + b)^2 = a^2 + 2ab + b^2\\(a - b)^2 = a^2 - 2ab + b^2\end{aligned}\end{align} \]</div>
-<div class="admonition important">
-<p class="admonition-title">Importante</p>
-<p>Hola</p>
-</div>
-<p>Hola 2</p>
+\[ \begin{align}\begin{aligned}\frac {1}{500} ( \frac {1}{R} + \frac {1}{500 - R} ) dR = k dt\\( \frac {1}{R} + \frac {1}{500 - R} ) dR = 500 k dt\end{aligned}\end{align} \]</div>
+<p>Integro ambos miembros</p>
+<div class="math notranslate nohighlight">
+\[\int ( \frac {1}{R} + \frac {1}{500 - R} ) dR = 500 k \int dt\]</div>
+<div class="math notranslate nohighlight">
+\[\ln |R| - \ln |500 - R| = 500kt + C_1\]</div>
+<div class="math notranslate nohighlight">
+\[\ln | \frac {R}{500-R} | = 500kt + C_1\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {R}{500-R} = e^{500kt + C_1}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {R}{500-R} = e^{500kt} e^{C_1}\]</div>
+<div class="math notranslate nohighlight" id="equation-ley-ratones-general">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ley-ratones-general" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {R}{500-R} = C e^{500kt}\]</div>
+<p>La ecuación <a class="reference internal" href="#equation-ley-ratones-general">(4)</a> la dejaremos como está, ya que
+nos es de utilidad en la forma actual.</p>
+<p>Trayendo nuevamente los datos del enunciado (condiciones iniciales) sabemos
+que <span class="math notranslate nohighlight">\(R(t=0) = 5\)</span>, por lo que lo reemplazamos en <a class="reference internal" href="#equation-ley-ratones-general">(4)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\frac {5}{500-5} = C e^{500 k * 0}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {5}{495} = C\]</div>
+<div class="math notranslate nohighlight">
+\[C = \frac {1}{99}\]</div>
+<p>Por lo que sustituyendo <span class="math notranslate nohighlight">\(C\)</span> en <a class="reference internal" href="#equation-ley-ratones-general">(4)</a> nos
+queda:</p>
+<div class="math notranslate nohighlight" id="equation-ley-ratones">
+<span class="eqno">(5)<a class="headerlink" href="#equation-ley-ratones" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {R}{500-R} = \frac {1}{99} e^{500kt}\]</div>
+<p>Ahora solo nos queda averiguar la principal incógnita del problema, en la que
+debemos averiguar para qué valor de <span class="math notranslate nohighlight">\(t\)</span> se cumple que <span class="math notranslate nohighlight">\(R(t)=250\)</span>.
+Reemplazamos esto en <a class="reference internal" href="#equation-ley-ratones">(5)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\frac {250}{500-250} = \frac {1}{99} e^{500kt}\]</div>
+<div class="math notranslate nohighlight">
+\[1 = \frac {1}{99} e^{500kt}\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}99 = e^{500kt}\\\ln 99 = 500kt\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-solucion-p1">
+<span class="eqno">(6)<a class="headerlink" href="#equation-solucion-p1" title="Enlace permanente a esta ecuación">¶</a></span>\[t = \frac {\ln 99}{500k}\]</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
