@@ -278,7 +278,8 @@ Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
 Gráficas
 --------
 
-Para realizar 
+.. raw:: html
+   :file: _static/graph.html
 
 
 Ejercicio 2

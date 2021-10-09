@@ -1,0 +1,14 @@
+<div id="ggb-element"></div>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<script>
+    var params = {
+        "appName": "graphing", "width": 800, "height": 600,
+        "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false,
+        "material_id": "hskbkeyv"
+    };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
