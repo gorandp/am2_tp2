@@ -69,6 +69,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
+# Cloudflare deploy
 # docs/_build/
 
 # PyBuilder
