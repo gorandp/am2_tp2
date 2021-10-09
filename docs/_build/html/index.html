@@ -172,6 +172,33 @@
      Desarrollo
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficas">
+     Gráficas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicio-2">
+   Ejercicio 2
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Enunciado
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Desarrollo
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Gráficas
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -270,7 +297,7 @@ ratones libre de la enfermedad.</p>
 número de ratones que tienen la enfermedad con el número que está libre de
 ésta</p>
 </div></blockquote>
-<p>Con la siguiente ley:</p>
+<p>Con el siguiente modelo matemático:</p>
 <div class="math notranslate nohighlight" id="equation-planteo-ley">
 <span class="eqno">(1)<a class="headerlink" href="#equation-planteo-ley" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dR}{dt} = k R (500 - R)\]</div>
 <div class="math notranslate nohighlight" id="equation-var-sep">
@@ -302,33 +329,79 @@ del primer miembro:</p>
 \[\frac {R}{500-R} = e^{500kt + C_1}\]</div>
 <div class="math notranslate nohighlight">
 \[\frac {R}{500-R} = e^{500kt} e^{C_1}\]</div>
-<div class="math notranslate nohighlight" id="equation-ley-ratones-general">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ley-ratones-general" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {R}{500-R} = C e^{500kt}\]</div>
-<p>La ecuación <a class="reference internal" href="#equation-ley-ratones-general">(4)</a> la dejaremos como está, ya que
-nos es de utilidad en la forma actual.</p>
-<p>Trayendo nuevamente los datos del enunciado (condiciones iniciales) sabemos
-que <span class="math notranslate nohighlight">\(R(t=0) = 5\)</span>, por lo que lo reemplazamos en <a class="reference internal" href="#equation-ley-ratones-general">(4)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-ecuacion-ratones-practica">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ecuacion-ratones-practica" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {R}{500-R} = C e^{500kt}\]</div>
+<p>Reacomodando:</p>
+<div class="math notranslate nohighlight">
+\[\frac {1}{\frac {500}{R} -1} = C e^{500kt}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {500}{R} = \frac {1}{C e^{500kt}} + 1\]</div>
+<div class="math notranslate nohighlight" id="equation-solucion-ratones-general">
+<span class="eqno">(5)<a class="headerlink" href="#equation-solucion-ratones-general" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{(t)} = \frac {500}{ \frac {1}{C e^{500kt}} + 1 }\]</div>
+<p>La ecuación <a class="reference internal" href="#equation-solucion-ratones-general">(5)</a> es la solución general
+a nuestro modelo matemático planteado.</p>
+<p>Para calcular <span class="math notranslate nohighlight">\(C\)</span>, traeremos nuevamente la condicion inicial dada
+por el enunciado <span class="math notranslate nohighlight">\(R(t=0) = 5\)</span> y la reemplazamos en
+<a class="reference internal" href="#equation-ecuacion-ratones-practica">(4)</a> por practicidad:</p>
 <div class="math notranslate nohighlight">
 \[\frac {5}{500-5} = C e^{500 k * 0}\]</div>
 <div class="math notranslate nohighlight">
 \[\frac {5}{495} = C\]</div>
 <div class="math notranslate nohighlight">
 \[C = \frac {1}{99}\]</div>
-<p>Por lo que sustituyendo <span class="math notranslate nohighlight">\(C\)</span> en <a class="reference internal" href="#equation-ley-ratones-general">(4)</a> nos
-queda:</p>
-<div class="math notranslate nohighlight" id="equation-ley-ratones">
-<span class="eqno">(5)<a class="headerlink" href="#equation-ley-ratones" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {R}{500-R} = \frac {1}{99} e^{500kt}\]</div>
+<p>Por lo que sustituyendo <span class="math notranslate nohighlight">\(C\)</span> en <a class="reference internal" href="#equation-solucion-ratones-general">(5)</a>
+y reacomodando nos queda:</p>
+<div class="math notranslate nohighlight" id="equation-solucion-particular-previa-ratones">
+<span class="eqno">(6)<a class="headerlink" href="#equation-solucion-particular-previa-ratones" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{(t)} = \frac {500}{ \frac {99}{e^{500kt}} + 1 }\]</div>
+<p>Para determinar el valor de <span class="math notranslate nohighlight">\(k\)</span> deberíamos de tener otra condicion
+inicial, por lo que propondremos lo siguiente:</p>
+<div class="admonition-condicion-inicial-propuesta admonition">
+<p class="admonition-title">Condición inicial propuesta</p>
+<p>Se tomó la siguiente medición de las ratas infectadas: <span class="math notranslate nohighlight">\(R(t=5) = 10\)</span></p>
+</div>
+<p>Si esto lo reemplazamos en <a class="reference internal" href="#equation-ecuacion-ratones-practica">(4)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\frac {10}{500-10} = \frac {1}{99} e^{2500k}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac {99}{49} = e^{2500k}\]</div>
+<div class="math notranslate nohighlight">
+\[\ln \frac {99}{49} = 2500k\]</div>
+<div class="math notranslate nohighlight">
+\[k = \frac {\ln 99 - \ln 49}{2500} \approx 2.81 \times 10^{-4}\]</div>
+<p>Por lo que <a class="reference internal" href="#equation-solucion-particular-previa-ratones">(6)</a> nos queda:</p>
+<div class="math notranslate nohighlight" id="equation-solucion-particular-ratones">
+<span class="eqno">(7)<a class="headerlink" href="#equation-solucion-particular-ratones" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{(t)} = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }\]</div>
+<p>La cual, es la solución particular al modelo matemático planteado
+inicialmente.</p>
 <p>Ahora solo nos queda averiguar la principal incógnita del problema, en la que
 debemos averiguar para qué valor de <span class="math notranslate nohighlight">\(t\)</span> se cumple que <span class="math notranslate nohighlight">\(R(t)=250\)</span>.
-Reemplazamos esto en <a class="reference internal" href="#equation-ley-ratones">(5)</a>:</p>
+Reemplazamos esto último en <a class="reference internal" href="#equation-solucion-particular-ratones">(7)</a>:</p>
 <div class="math notranslate nohighlight">
-\[\frac {250}{500-250} = \frac {1}{99} e^{500kt}\]</div>
+\[250 = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }\]</div>
 <div class="math notranslate nohighlight">
-\[1 = \frac {1}{99} e^{500kt}\]</div>
+\[\frac {99}{e^{0.141 t}} + 1 = \frac {500}{250}\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}99 = e^{500kt}\\\ln 99 = 500kt\end{aligned}\end{align} \]</div>
+\[\frac {1}{99} e^{0.141 t} = 1\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}e^{0.141 t} = 99\\0.141 t = \ln 99\end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight" id="equation-solucion-p1">
-<span class="eqno">(6)<a class="headerlink" href="#equation-solucion-p1" title="Enlace permanente a esta ecuación">¶</a></span>\[t = \frac {\ln 99}{500k}\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-solucion-p1" title="Enlace permanente a esta ecuación">¶</a></span>\[t = \frac {\ln 99}{0.141} \approx 32.590\]</div>
+</div>
+<div class="section" id="graficas">
+<h2>Gráficas<a class="headerlink" href="#graficas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para realizar</p>
+</div>
+</div>
+<div class="section" id="ejercicio-2">
+<h1>Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="id2">
+<h2>Enunciado<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>Desarrollo<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>Gráficas<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
 </div>
 </div>
 <div class="section" id="indices-and-tables">

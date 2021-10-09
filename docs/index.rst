@@ -90,7 +90,7 @@ Se interpreta la teoría de difusión de epidemia planteada:
    número de ratones que tienen la enfermedad con el número que está libre de
    ésta
 
-Con la siguiente ley:
+Con el siguiente modelo matemático:
 
 .. math::
    :label: planteo-ley
@@ -161,15 +161,31 @@ Integro ambos miembros
    \frac {R}{500-R} = e^{500kt} e^{C_1}
 
 .. math::
-   :label: ley-ratones-general
+   :label: ecuacion-ratones-practica
 
    \frac {R}{500-R} = C e^{500kt}
 
-La ecuación :math:numref:`ley-ratones-general` la dejaremos como está, ya que
-nos es de utilidad en la forma actual.
+Reacomodando:
 
-Trayendo nuevamente los datos del enunciado (condiciones iniciales) sabemos
-que :math:`R(t=0) = 5`, por lo que lo reemplazamos en :math:numref:`ley-ratones-general`:
+.. math::
+
+   \frac {1}{\frac {500}{R} -1} = C e^{500kt}
+
+.. math::
+
+   \frac {500}{R} = \frac {1}{C e^{500kt}} + 1
+
+.. math::
+   :label: solucion-ratones-general
+
+   R_{(t)} = \frac {500}{ \frac {1}{C e^{500kt}} + 1 }
+
+La ecuación :math:numref:`solucion-ratones-general` es la solución general
+a nuestro modelo matemático planteado.
+
+Para calcular :math:`C`, traeremos nuevamente la condicion inicial dada
+por el enunciado :math:`R(t=0) = 5` y la reemplazamos en
+:math:numref:`ecuacion-ratones-practica` por practicidad:
 
 .. math::
 
@@ -183,37 +199,95 @@ que :math:`R(t=0) = 5`, por lo que lo reemplazamos en :math:numref:`ley-ratones-
 
    C = \frac {1}{99}
 
-Por lo que sustituyendo :math:`C` en :math:numref:`ley-ratones-general` nos
-queda:
+Por lo que sustituyendo :math:`C` en :math:numref:`solucion-ratones-general`
+y reacomodando nos queda:
 
 .. math::
-   :label: ley-ratones
+   :label: solucion-particular-previa-ratones
 
-   \frac {R}{500-R} = \frac {1}{99} e^{500kt}
+   R_{(t)} = \frac {500}{ \frac {99}{e^{500kt}} + 1 }
+
+Para determinar el valor de :math:`k` deberíamos de tener otra condicion
+inicial, por lo que propondremos lo siguiente:
+
+.. admonition:: Condición inicial propuesta
+
+  Se tomó la siguiente medición de las ratas infectadas: :math:`R(t=5) = 10`
+
+Si esto lo reemplazamos en :math:numref:`ecuacion-ratones-practica`:
+
+.. math::
+
+   \frac {10}{500-10} = \frac {1}{99} e^{2500k}
+
+.. math::
+
+   \frac {99}{49} = e^{2500k}
+
+.. math::
+
+   \ln \frac {99}{49} = 2500k
+
+.. math::
+
+   k = \frac {\ln 99 - \ln 49}{2500} \approx 2.81 \times 10^{-4}
+
+Por lo que :math:numref:`solucion-particular-previa-ratones` nos queda:
+
+.. math::
+   :label: solucion-particular-ratones
+
+   R_{(t)} = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }
+
+La cual, es la solución particular al modelo matemático planteado
+inicialmente.
 
 Ahora solo nos queda averiguar la principal incógnita del problema, en la que
 debemos averiguar para qué valor de :math:`t` se cumple que :math:`R(t)=250`.
-Reemplazamos esto en :math:numref:`ley-ratones`:
+Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
 
 .. math::
 
-   \frac {250}{500-250} = \frac {1}{99} e^{500kt}
+   250 = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }
 
 .. math::
 
-   1 = \frac {1}{99} e^{500kt}
+   \frac {99}{e^{0.141 t}} + 1 = \frac {500}{250}
 
 .. math::
 
-   99 = e^{500kt}
+   \frac {1}{99} e^{0.141 t} = 1
 
-   \ln 99 = 500kt
+.. math::
+
+   e^{0.141 t} = 99
+
+   0.141 t = \ln 99
 
 .. math::
    :label: solucion-p1
 
-   t = \frac {\ln 99}{500k}
+   t = \frac {\ln 99}{0.141} \approx 32.590
 
+
+
+Gráficas
+--------
+
+Para realizar 
+
+
+Ejercicio 2
+===========
+
+Enunciado
+---------
+
+Desarrollo
+----------
+
+Gráficas
+--------
 
 
 Indices and tables
