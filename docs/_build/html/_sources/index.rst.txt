@@ -233,7 +233,7 @@ Por lo que :math:numref:`solucion-particular-previa-ratones` nos queda:
 .. math::
    :label: solucion-particular-ratones
 
-   R_{(t)} = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }
+   R_{(t)} = \frac {500}{ \frac {99}{e^{0.1405 t}} + 1 }
 
 La cual, es la solución particular al modelo matemático planteado
 inicialmente.
@@ -244,31 +244,31 @@ Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
 
 .. math::
 
-   250 = \frac {500}{ \frac {99}{e^{0.141 t}} + 1 }
+   250 = \frac {500}{ \frac {99}{e^{0.1405 t}} + 1 }
 
 .. math::
 
-   \frac {99}{e^{0.141 t}} + 1 = \frac {500}{250}
+   \frac {99}{e^{0.1405 t}} + 1 = \frac {500}{250}
 
 .. math::
 
-   \frac {1}{99} e^{0.141 t} = 1
+   \frac {1}{99} e^{0.1405 t} = 1
 
 .. math::
 
-   e^{0.141 t} = 99
+   e^{0.1405 t} = 99
 
-   0.141 t = \ln 99
+   0.1405 t = \ln 99
 
 .. math::
    :label: solucion-p1
 
-   t = \frac {\ln 99}{0.141} \approx 32.590
+   t = \frac {\ln 99}{0.1405} \approx 32.705
 
 .. admonition:: Resultado final
 
    Por lo tanto, el tiempo que le tomará a la mitad de la población adquirir la
-   enfermedad es :math:`t=32.590` unidades de tiempo.
+   enfermedad es :math:`t=32.705` unidades de tiempo.
 
 
 Gráficas
