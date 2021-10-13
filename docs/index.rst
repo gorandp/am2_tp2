@@ -275,7 +275,7 @@ Gráficas
 --------
 
 .. raw:: html
-   :file: _static/graph.html
+   :file: _static/graph-1.html
 
 
 Ejercicio 2
