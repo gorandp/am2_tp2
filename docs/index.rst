@@ -271,8 +271,8 @@ Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
    enfermedad es :math:`t=32.705` unidades de tiempo.
 
 
-Gráficas
---------
+Interpretación gráfica
+----------------------
 
 .. raw:: html
    :file: _static/graph-1.html
