@@ -13,11 +13,7 @@ Alumnos
 -------
 
 - Goran Prpic. Ingeniería Electrónica.
-- Pablo Usero. Ingeniería
-
-.. todo::
-
-   Completar la ingeniería de Pablo
+- Pablo Usero. Ingeniería Mecánica.
 
 
 Consigna
