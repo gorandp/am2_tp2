@@ -278,20 +278,214 @@ Interpretación gráfica
    :file: _static/graph-1.html
 
 
+
 Ejercicio 2
 ===========
+
+Dennis G. Zill y Warren S. Wright (2015). **Ecuaciones Diferenciales con
+problemas con valores en la frontera.** (8va ed.). Cengage Learning.
+
 
 Enunciado
 ---------
 
-Test
+.. todo::
+
+   Agregar enunciado
+
 
 Desarrollo
 ----------
 
-Test
+Sea :math:`A_{(t)}` la cantidad de sal, medida en kilogramos, dentro del tanque
+en el tiempo :math:`t`, entonces la razón con al que :math:`A_{(t)}` cambia es
+una razón neta:
 
-Gráficas
---------
+.. math::
+   :label: ec-dif-inicial
 
-Test
+   \frac {dA}{dt} = R_{entra} - R_{sale}
+
+Donde:
+
+- :math:`R_{entra}` es la **razón de entrada** de la sal con la que entra en
+  el tanque
+- :math:`R_{sale}` es la **razón de salida** de la sal con la que sale del
+  tanque
+
+A su vez, :math:`R_{entra}`, que se mide en kilos por minuto, es el producto
+de la concentración de la afluencia de sal y la tasa de flujo de fluido.
+Ambas magnitudes, según el enunciado, valen :math:`2 \frac {kg}{litro}` y 
+:math:`6 \frac {litro}{minuto}` respectivamente, entonces:
+
+.. math::
+   :label: def-r-entra
+
+   R_{entra} = 2 \frac {kg}{litro} * 3 \frac {litro}{minuto} = 6 \frac {kg}{minuto}
+
+Como la solución que sale del tanque tiene la misma razón con la que entra, la
+cantidad de litros de salmuera en el tanque al tiempo t es una constante de
+300 litros.
+
+Sea :math:`c_{(t)}` la concentración de la sal en el tanque así como en el
+flujo de salida, y queda definida de la siguiente manera:
+
+.. math::
+
+   c_{(t)} = \frac { A_{(t)} }{300} \frac {kg}{litro}
+
+Recordemos que :math:`A_{(t)}`  es la **cantidad** de sal detro del tanque
+en un tiempo :math:`t`.
+
+Luego, la razón de salida :math:`R_{sale}`, muy similar a la razón de
+entrada, es el producto de la concentración de sal en el tanque y el flujo
+de salida de la solución. Estas magnitudes valen :math:`c_{(t)}` y
+:math:`3 \frac {litro}{minuto}`, es decir:
+
+.. math::
+
+   R_{sale} = c_{(t)} * 3 \frac {litro}{minuto} 
+
+Reemplazamos la definición de :math:`c_{(t)}`, simplificamos y nos queda:
+
+.. math::
+   :label: def-r-sale
+
+   R_{sale} = \frac { A_{(t)} }{100} \frac {kg}{minuto}
+
+Con ambas razones definidas, sustituimos :math:numref:`def-r-entra` y
+:math:numref:`def-r-sale` en :math:numref:`ec-dif-inicial`:
+
+.. math::
+
+   \frac {dA}{dt} = \left( 6 \frac {kg}{minuto} \right) - \left( \frac
+                    { A_{(t)} }{100} \frac {kg}{minuto} \right)
+
+Reacomodando:
+
+.. math::
+
+   \frac {dA}{dt} + \frac { A_{(t)} }{100} \frac {kg}{minuto} = 6 \frac
+   {kg}{minuto}
+
+Vemos que todos los términos, en ambos miembros, poseen las mismas unidades
+(ya que :math:`\left[ \frac {dA}{dt} \right] = \frac {kg}{minuto}` ), y por lo
+tanto, para simplificar el cálculo, dejaremos de mencionarlas de ahora en
+más, a no ser que sea necesario explicitarlas. Entonces:
+
+.. math::
+   :label: ec-dif-mod-mat
+
+   \frac {dA}{dt} + \frac { A_{(t)} }{100} = 6
+
+La ecuación :math:numref:`ec-dif-mod-mat` es la modelización matemática del
+problema planteado, la cual es una ecuación diferencial ordinaria de primer
+orden.
+
+Si :math:`R_{entra}` y :math:`R_{sale}` son las razones de entrada y de salida
+de las soluciones de salmuera, entonces hay tres posibilidades:
+
+#. :math:`R_{entra} = R_{sale}`
+#. :math:`R_{entra} > R_{sale}`
+#. :math:`R_{entra} < R_{sale}`
+
+En el análisis que conduce a la ecuación :math:numref:`ec-dif-mod-mat` se tomo
+la relación :math:`R_{entra} = R_{sale}`.
+
+Para encontrar la función solución :math:`A_{(t)}` se utiliza método del
+factor integrante. Según :math:numref:`ec-dif-mod-mat` se definen:
+
+.. math::
+
+   p_{(t)} = \frac {1}{100}
+
+.. math::
+
+   q_{(t)} = 6
+
+Sea :math:`u_{(t)}` el factor integrante definido como:
+
+.. math::
+
+   u_{(t)} = e ^ {\int p_{(t)} dt} = e ^ {\frac {1}{100} \int dt}
+
+.. math::
+   :label: factor-integrante
+
+   u_{(t)} = e^{\frac {t}{100}}
+
+Multiplicando ambos miembros de :math:numref:`ec-dif-mod-mat` por el factor
+integrante nos queda:
+
+.. math::
+
+   \frac {dA}{dt} * u_{(t)} + \frac { A_{(t)} }{100} * u_{(t)} = 6 * u_{(t)}
+
+Sustituimos con :math:numref:`factor-integrante`:
+
+.. math::
+
+   \frac {dA}{dt} * e^{\frac {t}{100}} + \frac { A_{(t)} }{100} *
+   e^{\frac {t}{100}} = 6 * e^{\frac {t}{100}}
+
+Notamos que el miembro izquierdo de la expresión anterior es igual a la
+derivada del producto entre :math:`A_{(t)}` y :math:`e^{\frac {t}{100}}`, por
+lo que se puede reescribir como:
+
+.. math::
+
+   \frac {d}{dt} (A_{(t)} * e^{\frac {t}{100}}) = 6 * e^{\frac {t}{100}}
+
+Integramos ambos miembros:
+
+.. math::
+
+   \int \frac {d}{dt} (A_{(t)} * e^{\frac {t}{100}}) dt = \int 6 *
+   e^{\frac {t}{100}} dt
+
+.. math::
+
+   A_{(t)} * e^{\frac {t}{100}} = 600 * e^{\frac {t}{100}} + C
+
+Tal que :math:`C` es una constante de integración.
+
+Por último, despejando :math:`A_{(t)}`, obtenemos la **solución general** de la
+ecuación diferencial ordinaria de primer orden:
+
+.. math::
+   :label: solucion-tanque-general
+
+   A_{(t)} = 600 + C * e^{\frac {-t}{100}}
+
+Por la condición inicial dada en el enunciado, sabemos que :math:`A(t=0) = 50`.
+Sustituimos esta condición inicial en :math:numref:`solucion-tanque-general`:
+
+.. math::
+
+   50 = 600 + C * e^{\frac {0}{100}}
+
+.. math::
+
+   -550 = C * 1 \implies C = -550
+
+Reemplazamos en :math:numref:`solucion-tanque-general`:
+
+.. math::
+   :label: solucion-tanque-particular
+
+   A_{(t)} = 600 - 550 * e^{\frac {-t}{100}}
+
+Y obtenemos :math:numref:`solucion-tanque-particular` que es la **solución
+particular** de nuestro modelo planteado inicialmente.
+
+.. todo::
+
+   Resolver incógnita a plantear en el enunciado
+
+
+Interpretación gráfica
+----------------------
+
+.. todo::
+
+   Agregar gráfica
