@@ -493,6 +493,11 @@ particular** de nuestro modelo planteado inicialmente.
 Interpretación gráfica
 ----------------------
 
+
+.. raw:: html
+   :file: _static/graph-2.html
+
+
 .. todo::
 
-   Agregar gráfica
+   Agregar comentarios
