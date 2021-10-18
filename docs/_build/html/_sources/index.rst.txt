@@ -72,6 +72,12 @@ producto del número de ratones que tienen la enfermedad con el número que est�
 libre de ésta. Asumiendo que la teoría es correcta, ¿cuánto tiempo le tomará a
 la mitad de la población adquirir la enfermedad?
 
+.. figure:: _static/lab_rats.webp
+   :alt: Ratones
+
+   Imagen ilustrativa. `Criver <https://www.criver.com/eureka/the-early-
+   history-of-the-lab-rat>`_
+
 Desarrollo
 ----------
 
