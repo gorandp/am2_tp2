@@ -14,6 +14,7 @@ Alumnos
 
 - Goran Prpic. Ingeniería Electrónica.
 - Pablo Usero. Ingeniería Mecánica.
+- Santiago Asenjo. Ingeniería Electrónica.
 
 
 Consigna
