@@ -297,9 +297,31 @@ problemas con valores en la frontera.** (8va ed.). Cengage Learning.
 Enunciado
 ---------
 
-.. todo::
+Se posee un tanque con 300 litros de salmuera con 50 kg de sal disuelta en un
+inicio. Al mismo se le quiere variar la concentración de sal mediante el
+ingreso de salmuera de una concentración distinta y la expulsión del líquido
+del tanque al mismo ritmo del que entra.
 
-   Agregar enunciado
+Con esto se quiere demostrar que la tasa de variación instantánea de la
+cantidad de sal en el tanque responde directamente a la diferencia de la razón
+de entrada de sal con la de salida.
+
+En este caso, la salmuera ingresante tiene una concentración de 2kg/litro de
+sal. El ritmo con que ingresa es de 3 litros/minuto.
+
+Además de demostrar lo mencionado previamente, se quiere averiguar si hay una
+tendencia en la cantidad de sal en un período largo de tiempo, y si la hay,
+saber su valor.
+
+Por ultimo, ¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
+de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?
+
+
+.. figure:: _static/tanque.png
+   :alt: tanque
+
+   Imagen ilustrativa. `Zill y Wright. Ecuaciones Diferenciales con
+   problemas con valores en la frontera.`
 
 
 Desarrollo
