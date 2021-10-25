@@ -3,10 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Trabajo Practico 2
+Trabajo Práctico 2
 ==================
 
-Fecha límite de entrega: 01-11-21 (23:59 h)
+**Universidad Tecnológica Nacional - Facultad Regional San Nicolás**
+
+**Materia**: Análisis Matemático 2
+
+**Fecha**: 25-10-2021
 
 
 Alumnos
@@ -40,6 +44,10 @@ En el video se debe mostrar:
 
    Se realiza en EQUIPO conformado por 2 o 3 estudiantes (pueden pertenecer a
    especialidades distintas)
+
+.. attention::
+
+   Fecha límite de entrega: 01-11-21 (23:59 h)
 
 .. attention::
 
@@ -193,7 +201,7 @@ por el enunciado :math:`R(t=0) = 5` y la reemplazamos en
 
 .. math::
 
-   \frac {5}{500-5} = C e^{500 k * 0}
+   \frac {5}{500-5} = C e^{500 k · 0}
 
 .. math::
 
@@ -318,7 +326,7 @@ problemas con valores en la frontera.** (8va ed.). Cengage Learning.
 Enunciado
 ---------
 
-Se posee un tanque con 300 litros de salmuera con 50 kg de sal disuelta en un
+Se posee un tanque con 300 litros de salmuera y 50 kg de sal disuelta en un
 inicio. Al mismo se le quiere variar la concentración de sal mediante el
 ingreso de salmuera de una concentración distinta y la expulsión del líquido
 del tanque al mismo ritmo del que entra.
@@ -339,6 +347,7 @@ de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?
 
 
 .. figure:: _static/tanque.png
+   :width: 250
    :alt: tanque
 
    Imagen ilustrativa. `Zill y Wright. Ecuaciones Diferenciales con
@@ -348,9 +357,18 @@ de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?
 Desarrollo
 ----------
 
-Sea :math:`A_{(t)}` la cantidad de sal, medida en kilogramos, dentro del tanque
-en el tiempo :math:`t`, entonces la razón con al que :math:`A_{(t)}` cambia es
-una razón neta:
+Sea :math:`A(t)` la cantidad de sal, medida en kilogramos, dentro del tanque
+en el tiempo :math:`t`. Además, el enunciado nos dice que :math:`A(t=0) = 50`.
+También sabemos que :math:`[A(t)] = kg`.
+
+Luego, el enunciado nos dice lo siguiente:
+
+  se quiere demostrar que la **tasa de variación** instantánea de la **cantidad
+  de sal en el tanque** responde **directamente** a la **diferencia** de la
+  **razón de entrada de sal con la de salida**
+
+Lo cual, se puede modelizar matemáticamente con la siguiente ecuación
+diferencial:
 
 .. math::
    :label: ec-dif-inicial
@@ -364,28 +382,29 @@ Donde:
 - :math:`R_{sale}` es la **razón de salida** de la sal con la que sale del
   tanque
 
-A su vez, :math:`R_{entra}`, que se mide en kilos por minuto, es el producto
-de la concentración de la afluencia de sal y la tasa de flujo de fluido.
-Ambas magnitudes, según el enunciado, valen :math:`2 \frac {kg}{litro}` y 
-:math:`6 \frac {litro}{minuto}` respectivamente, entonces:
+A su vez, :math:`R_{entra}`, que se mide en :math:`\frac {kg}{minuto}`, es el
+producto de la concentración de la afluencia de sal y la tasa de flujo de
+fluido. Ambas magnitudes, según el enunciado, valen :math:`2 \frac {kg}{litro}`
+y :math:`6 \frac {litro}{minuto}` respectivamente, entonces:
 
 .. math::
    :label: def-r-entra
 
-   R_{entra} = 2 \frac {kg}{litro} * 3 \frac {litro}{minuto} = 6 \frac {kg}{minuto}
+   R_{entra} = 2 \frac {kg}{litro} · 3 \frac {litro}{minuto} = 6 \frac {kg}{minuto}
 
-Como la solución que sale del tanque tiene la misma razón con la que entra, la
-cantidad de litros de salmuera en el tanque al tiempo t es una constante de
-300 litros.
+Como la solución que sale del tanque lo hace con la misma intensidad que con
+la que entra, la cantidad de litros de salmuera en el tanque al tiempo
+:math:`t` es una constante de 300 litros.
 
 Sea :math:`c_{(t)}` la concentración de la sal en el tanque así como en el
 flujo de salida, y queda definida de la siguiente manera:
 
 .. math::
+   :label: def-concentracion-tanque
 
    c_{(t)} = \frac { A_{(t)} }{300} \frac {kg}{litro}
 
-Recordemos que :math:`A_{(t)}`  es la **cantidad** de sal detro del tanque
+Recordemos que :math:`A(t)`  es la **cantidad** de sal dentro del tanque
 en un tiempo :math:`t`.
 
 Luego, la razón de salida :math:`R_{sale}`, muy similar a la razón de
@@ -395,7 +414,7 @@ de salida de la solución. Estas magnitudes valen :math:`c_{(t)}` y
 
 .. math::
 
-   R_{sale} = c_{(t)} * 3 \frac {litro}{minuto} 
+   R_{sale} = c_{(t)} · 3 \frac {litro}{minuto} 
 
 Reemplazamos la definición de :math:`c_{(t)}`, simplificamos y nos queda:
 
@@ -429,21 +448,11 @@ más, a no ser que sea necesario explicitarlas. Entonces:
 
    \frac {dA}{dt} + \frac { A_{(t)} }{100} = 6
 
-La ecuación :math:numref:`ec-dif-mod-mat` es la modelización matemática del
-problema planteado, la cual es una ecuación diferencial ordinaria de primer
-orden.
+La ecuación :math:numref:`ec-dif-mod-mat` es la **modelización matemática** del
+problema planteado, la cual es una **ecuación diferencial lineal de primer
+orden**.
 
-Si :math:`R_{entra}` y :math:`R_{sale}` son las razones de entrada y de salida
-de las soluciones de salmuera, entonces hay tres posibilidades:
-
-#. :math:`R_{entra} = R_{sale}`
-#. :math:`R_{entra} > R_{sale}`
-#. :math:`R_{entra} < R_{sale}`
-
-En el análisis que conduce a la ecuación :math:numref:`ec-dif-mod-mat` se tomo
-la relación :math:`R_{entra} = R_{sale}`.
-
-Para encontrar la función solución :math:`A_{(t)}` se utiliza método del
+Para encontrar la función solución :math:`A(t)` se utiliza método del
 factor integrante. Según :math:numref:`ec-dif-mod-mat` se definen:
 
 .. math::
@@ -470,68 +479,128 @@ integrante nos queda:
 
 .. math::
 
-   \frac {dA}{dt} * u_{(t)} + \frac { A_{(t)} }{100} * u_{(t)} = 6 * u_{(t)}
+   \frac {dA}{dt} · u_{(t)} + \frac { A_{(t)} }{100} · u_{(t)} = 6 · u_{(t)}
 
 Sustituimos con :math:numref:`factor-integrante`:
 
 .. math::
 
-   \frac {dA}{dt} * e^{\frac {t}{100}} + \frac { A_{(t)} }{100} *
-   e^{\frac {t}{100}} = 6 * e^{\frac {t}{100}}
+   \frac {dA}{dt} · e^{\frac {t}{100}} + \frac { A_{(t)} }{100} ·
+   e^{\frac {t}{100}} = 6 · e^{\frac {t}{100}}
 
 Notamos que el miembro izquierdo de la expresión anterior es igual a la
-derivada del producto entre :math:`A_{(t)}` y :math:`e^{\frac {t}{100}}`, por
-lo que se puede reescribir como:
+derivada del producto entre :math:`A(t)` y :math:`e^{\frac {t}{100}}`, por
+lo que la expresión anterior se puede reescribir como:
 
 .. math::
 
-   \frac {d}{dt} (A_{(t)} * e^{\frac {t}{100}}) = 6 * e^{\frac {t}{100}}
+   \frac {d}{dt} (A_{(t)} · e^{\frac {t}{100}}) = 6 · e^{\frac {t}{100}}
 
 Integramos ambos miembros:
 
 .. math::
 
-   \int \frac {d}{dt} (A_{(t)} * e^{\frac {t}{100}}) dt = \int 6 *
+   \int \frac {d}{dt} (A_{(t)} · e^{\frac {t}{100}}) dt = \int 6 ·
    e^{\frac {t}{100}} dt
 
 .. math::
 
-   A_{(t)} * e^{\frac {t}{100}} = 600 * e^{\frac {t}{100}} + C
+   A_{(t)} · e^{\frac {t}{100}} = 600 · e^{\frac {t}{100}} + C
 
 Tal que :math:`C` es una constante de integración.
 
-Por último, despejando :math:`A_{(t)}`, obtenemos la **solución general** de la
+Por último, despejando :math:`A(t)`, obtenemos la **solución general** de la
 ecuación diferencial ordinaria de primer orden:
 
 .. math::
    :label: solucion-tanque-general
 
-   A_{(t)} = 600 + C * e^{\frac {-t}{100}}
+   A_{(t)} = 600 + C · e^{\frac {-t}{100}}
 
 Por la condición inicial dada en el enunciado, sabemos que :math:`A(t=0) = 50`.
 Sustituimos esta condición inicial en :math:numref:`solucion-tanque-general`:
 
 .. math::
 
-   50 = 600 + C * e^{\frac {0}{100}}
+   50 = 600 + C · e^{\frac {0}{100}}
 
 .. math::
 
-   -550 = C * 1 \implies C = -550
+   -550 = C · 1 \implies C = -550
 
 Reemplazamos en :math:numref:`solucion-tanque-general`:
 
 .. math::
    :label: solucion-tanque-particular
 
-   A_{(t)} = 600 - 550 * e^{\frac {-t}{100}}
+   A_{(t)} = 600 - 550 · e^{\frac {-t}{100}}
 
 Y obtenemos :math:numref:`solucion-tanque-particular` que es la **solución
 particular** de nuestro modelo planteado inicialmente.
 
+Ahora, resolveremos la primer incógnita de nuestro problema, y es, si hay o no
+una tendencia en la cantidad de sal depositada pasado un período largo de
+tiempo. Para esto observamos la cantidad de sal depositada en el tanque para
+distintos valores temporales.
+
+.. list-table:: List tables can have captions like this one.
+    :widths: 10 10 5 10 10
+    :header-rows: 1
+
+    * - :math:`t` [minutos]
+      - :math:`A(t)` [kg]
+      - 
+      - :math:`t` [minutos]
+      - :math:`A(t)` [kg]
+    * - 0
+      - 50
+      - 
+      - 200
+      - 525.56
+    * - 50
+      - 266.4
+      - 
+      - 300
+      - 572.61
+    * - 100
+      - 397.66
+      - 
+      - 400
+      - 589.92
+    * - 150
+      - 477.27
+      - 
+      - 500
+      - 596.29
+
+
 .. todo::
 
    Resolver incógnita a plantear en el enunciado
+
+
+.. todo::
+
+   Resolver incógnita a plantear en el enunciado
+
+
+Por último, se pide lo siguiente:
+
+  ¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
+  de la salmuera ingresante fuera mayor que el flujo de salida de la del
+  tanque?
+
+En el análisis que conduce a la ecuación :math:numref:`ec-dif-mod-mat` se tomo
+la relación :math:`R_{entra} = R_{sale}`, pero esta relación puede ser de 3
+formas:
+
+#. :math:`R_{entra} = R_{sale}`
+#. :math:`R_{entra} > R_{sale}`
+#. :math:`R_{entra} < R_{sale}`
+
+.. todo::
+
+   Resolver último cuestionante
 
 
 Interpretación gráfica
