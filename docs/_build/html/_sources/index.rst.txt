@@ -573,16 +573,18 @@ distintos valores temporales.
       - 500
       - 596.29
 
+Se puede observar que conforme t aumenta la cantidad de sal depositada
+alcanza un límite de :math:`A=600kg`, por lo tanto, calculamos el límite
+de :math:`A(t)` para cuando :math:`t \implies \infty`:
 
-.. todo::
+.. math::
 
-   Resolver incógnita a plantear en el enunciado
+   lim_{t \to \infty} A_{(t)} = lim_{t \to \infty} \left( 600 - 550 ·
+   e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600
 
+.. admonition:: Resultado final
 
-.. todo::
-
-   Resolver incógnita a plantear en el enunciado
-
+   La cantidad de sal en un período largo de tiempo tiende a 600kg
 
 Por último, se pide lo siguiente:
 

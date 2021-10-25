@@ -195,7 +195,7 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
+    <a class="reference internal nav-link" href="#id4">
      Interpretación gráfica
     </a>
    </li>
@@ -282,9 +282,9 @@ que postula que la tasa de cambio en la población infectada es proporcional al
 producto del número de ratones que tienen la enfermedad con el número que está
 libre de ésta. Asumiendo que la teoría es correcta, ¿cuánto tiempo le tomará a
 la mitad de la población adquirir la enfermedad?</p>
-<div class="figure align-default" id="id8">
+<div class="figure align-default" id="id6">
 <img alt="Ratones" src="_images/lab_rats.webp" />
-<p class="caption"><span class="caption-text">Imagen ilustrativa. <a class="reference external" href="https://www.criver.com/eureka/the-early-history-of-the-lab-rat">Criver</a></span><a class="headerlink" href="#id8" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-text">Imagen ilustrativa. <a class="reference external" href="https://www.criver.com/eureka/the-early-history-of-the-lab-rat">Criver</a></span><a class="headerlink" href="#id6" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 <div class="section" id="desarrollo">
@@ -461,10 +461,10 @@ tendencia en la cantidad de sal en un período largo de tiempo, y si la hay,
 saber su valor.</p>
 <p>Por ultimo, ¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
 de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?</p>
-<div class="figure align-default" id="id9">
+<div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="_images/tanque.png"><img alt="tanque" src="_images/tanque.png" style="width: 250px;" /></a>
 <p class="caption"><span class="caption-text">Imagen ilustrativa. <cite>Zill y Wright. Ecuaciones Diferenciales con
-problemas con valores en la frontera</cite> (valores editados).</span><a class="headerlink" href="#id9" title="Enlace permanente a esta imagen">¶</a></p>
+problemas con valores en la frontera</cite> (valores editados).</span><a class="headerlink" href="#id7" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -581,8 +581,8 @@ particular</strong> de nuestro modelo planteado inicialmente.</p>
 una tendencia en la cantidad de sal depositada pasado un período largo de
 tiempo. Para esto observamos la cantidad de sal depositada en el tanque para
 distintos valores temporales.</p>
-<table class="colwidths-given table" id="id10">
-<caption><span class="caption-text">List tables can have captions like this one.</span><a class="headerlink" href="#id10" title="Enlace permanente a esta tabla">¶</a></caption>
+<table class="colwidths-given table" id="id8">
+<caption><span class="caption-text">List tables can have captions like this one.</span><a class="headerlink" href="#id8" title="Enlace permanente a esta tabla">¶</a></caption>
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 22%" />
@@ -625,13 +625,15 @@ distintos valores temporales.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Por hacer</p>
-<p>Resolver incógnita a plantear en el enunciado</p>
-</div>
-<div class="admonition-todo admonition" id="id4">
-<p class="admonition-title">Por hacer</p>
-<p>Resolver incógnita a plantear en el enunciado</p>
+<p>Se puede observar que conforme t aumenta la cantidad de sal depositada
+alcanza un límite de <span class="math notranslate nohighlight">\(A=600kg\)</span>, por lo tanto, calculamos el límite
+de <span class="math notranslate nohighlight">\(A(t)\)</span> para cuando <span class="math notranslate nohighlight">\(t \implies \infty\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[lim_{t \to \infty} A_{(t)} = lim_{t \to \infty} \left( 600 - 550 ·
+e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600\]</div>
+<div class="admonition-resultado-final admonition">
+<p class="admonition-title">Resultado final</p>
+<p>La cantidad de sal en un período largo de tiempo tiende a 600kg</p>
 </div>
 <p>Por último, se pide lo siguiente:</p>
 <blockquote>
@@ -647,13 +649,13 @@ formas:</p>
 <li><p><span class="math notranslate nohighlight">\(R_{entra} &gt; R_{sale}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(R_{entra} &lt; R_{sale}\)</span></p></li>
 </ol>
-<div class="admonition-todo admonition" id="id5">
+<div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Por hacer</p>
 <p>Resolver último cuestionante</p>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>Interpretación gráfica<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="id4">
+<h2>Interpretación gráfica<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
 <div id="ggb-element-2"></div>
 
 <script>
@@ -667,7 +669,7 @@ formas:</p>
         applet_2.inject('ggb-element-2');
     });
 </script>
-<div class="admonition-todo admonition" id="id7">
+<div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Por hacer</p>
 <p>Agregar comentarios</p>
 </div>
@@ -693,9 +695,7 @@ formas:</p>
     <div class="container">
       <p>
         
-          Por Goran Prpic, Pablo Usero, Santiago Asenjo<br/>
-        
-            &copy; Derechos de autor 2021, Goran Prpic, Pablo Usero, Santiago Asenjo.<br/>
+            &copy; Derechos de autor .<br/>
       </p>
     </div>
   </footer>
