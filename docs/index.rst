@@ -283,9 +283,29 @@ Reemplazamos esto último en :math:numref:`solucion-particular-ratones`:
 Interpretación gráfica
 ----------------------
 
+Vemos que la primer condicion inicial (CI)(en el gráfico se representa con un
+punto llamado :math:`A(0, a_y)`) hace variar el valor de :math:`C`. También,
+vemos que si mantenemos fijo el valor de la segunda CI (representada con un
+punto llamado :math:`B(5 , b_y)`), variando :math:`a_y` se modifica también
+el valor de :math:`k`. Al variar :math:`b_y` se consigue cambiar el valor de
+:math:`k`.
+
 .. raw:: html
    :file: _static/graph-1.html
 
+Vemos que el valor de :math:`t` en :math:`R(t)=250` es ligeramente distinto al
+calculado en el desarrollo, esto se debe a que hubo un error de redondeo cuando
+se calculó :math:`k` en el desarrollo, si se hubieran mantenido las expresiones
+sin calcular y se resolvía utilizando la mayor cantidad de decimales posible,
+el resultado sería identico al mostrado en la gráfica.
+
+En el siguiente gráfico, no mantendremos fijo la posición de :math:`B`.
+Modificaremos el valor de :math:`k` con un deslizador. Esto los haremos para
+mostrar cómo al variar :math:`a_y` la curva solución se desplaza y "sigue"
+las trazas dada por los vectores del campo descripto por la solución general.
+
+.. raw:: html
+   :file: _static/graph-1b.html
 
 
 Ejercicio 2

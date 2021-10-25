@@ -391,6 +391,12 @@ enfermedad es <span class="math notranslate nohighlight">\(t=32.705\)</span> uni
 </div>
 <div class="section" id="interpretacion-grafica">
 <h2>Interpretación gráfica<a class="headerlink" href="#interpretacion-grafica" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Vemos que la primer condicion inicial (CI)(en el gráfico se representa con un
+punto llamado <span class="math notranslate nohighlight">\(A(0, a_y)\)</span>) hace variar el valor de <span class="math notranslate nohighlight">\(C\)</span>. También,
+vemos que si mantenemos fijo el valor de la segunda CI (representada con un
+punto llamado <span class="math notranslate nohighlight">\(B(5 , b_y)\)</span>), variando <span class="math notranslate nohighlight">\(a_y\)</span> se modifica también
+el valor de <span class="math notranslate nohighlight">\(k\)</span>. Al variar <span class="math notranslate nohighlight">\(b_y\)</span> se consigue cambiar el valor de
+<span class="math notranslate nohighlight">\(k\)</span>.</p>
 <div id="ggb-element"></div>
 
 <script src="https://www.geogebra.org/apps/deployggb.js"></script>
@@ -403,6 +409,28 @@ enfermedad es <span class="math notranslate nohighlight">\(t=32.705\)</span> uni
     var applet = new GGBApplet(params, true);
     window.addEventListener("load", function() { 
         applet.inject('ggb-element');
+    });
+</script>
+<p>Vemos que el valor de <span class="math notranslate nohighlight">\(t\)</span> en <span class="math notranslate nohighlight">\(R(t)=250\)</span> es ligeramente distinto al
+calculado en el desarrollo, esto se debe a que hubo un error de redondeo cuando
+se calculó <span class="math notranslate nohighlight">\(k\)</span> en el desarrollo, si se hubieran mantenido las expresiones
+sin calcular y se resolvía utilizando la mayor cantidad de decimales posible,
+el resultado sería identico al mostrado en la gráfica.</p>
+<p>En el siguiente gráfico, no mantendremos fijo la posición de <span class="math notranslate nohighlight">\(B\)</span>.
+Modificaremos el valor de <span class="math notranslate nohighlight">\(k\)</span> con un deslizador. Esto los haremos para
+mostrar cómo al variar <span class="math notranslate nohighlight">\(a_y\)</span> la curva solución se desplaza y «sigue»
+las trazas dada por los vectores del campo descripto por la solución general.</p>
+<div id="ggb-element-1b"></div>
+
+<script>
+    var params_1b = {
+        "appName": "graphing", "width": 800, "height": 500,
+        "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false,
+        "material_id": "qaebxzn8"
+    };
+    var applet_1b = new GGBApplet(params_1b, true);
+    window.addEventListener("load", function() { 
+        applet_1b.inject('ggb-element-1b');
     });
 </script>
 </div>
