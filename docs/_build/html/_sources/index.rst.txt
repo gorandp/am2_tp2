@@ -543,7 +543,7 @@ una tendencia en la cantidad de sal depositada pasado un período largo de
 tiempo. Para esto observamos la cantidad de sal depositada en el tanque para
 distintos valores temporales.
 
-.. list-table:: List tables can have captions like this one.
+.. list-table::
     :widths: 10 10 5 10 10
     :header-rows: 1
 
