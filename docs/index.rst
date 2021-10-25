@@ -88,13 +88,13 @@ Sea :math:`R(t)` el número de ratones infectados con la enfermedad en el tiempo
 deduce que :math:`R(0) = 5`. Por último, sea :math:`500 - R(t)` el número de
 ratones libre de la enfermedad.
 
-Se interpreta la teoría de difusión de epidemia planteada:
+La teoría de difusión de epidemia plantea lo siguiente:
 
    La tasa de cambio en la población infectada es proporcional al producto del
    número de ratones que tienen la enfermedad con el número que está libre de
    ésta
 
-Con el siguiente modelo matemático:
+Lo cual se modeliza con el siguiente modelo matemático:
 
 .. math::
    :label: planteo-ley
@@ -218,7 +218,8 @@ inicial, por lo que propondremos lo siguiente:
 
   Se tomó la siguiente medición de las ratas infectadas: :math:`R(t=5) = 10`
 
-Si esto lo reemplazamos en :math:numref:`ecuacion-ratones-practica`:
+Si esto lo reemplazamos en :math:numref:`ecuacion-ratones-practica`
+(reemplazando previamente el valor de :math:`C`):
 
 .. math::
 
