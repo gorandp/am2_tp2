@@ -321,7 +321,7 @@ de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?
    :alt: tanque
 
    Imagen ilustrativa. `Zill y Wright. Ecuaciones Diferenciales con
-   problemas con valores en la frontera.`
+   problemas con valores en la frontera` (valores editados).
 
 
 Desarrollo
