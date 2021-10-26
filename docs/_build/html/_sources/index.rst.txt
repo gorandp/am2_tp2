@@ -614,7 +614,58 @@ formas:
 #. :math:`R_{entra} > R_{sale}`
 #. :math:`R_{entra} < R_{sale}`
 
+Para este caso, la forma a tomar es de :math:`R_{entra} > R_{sale}`. Por lo
+tanto, supongamos que la solución bien mezclada se bombea hacia afuera con una
+tasa de flujo más lenta de :math:`2 litro/minuto` entonces se acumulará en el
+tanque con la razón :math:`f_{entra} - f_{sale} = (3-2) litro/minuto = 1 kg/minuto`.
+
+Después de :math:`t` minutos: :math:`(1 litro/minuto) · (t minuto) = t litro`
+
+Vemos que la cantidad de fluido incrementa con el tiempo, por lo que se
+modificará :math:numref:`def-concentracion-tanque` y se vuelve a definir
+:math:`c_{(t)}` como:
+
+.. math::
+   :label: def-concentracion-tanque-nueva
+
+   c_{(t)} = \frac { A_{(t)} }{300 + t} \frac {kg}{litro}
+
+Esto también obliga a reescribir :math:numref:`def-r-sale`:
+
+.. math::
+
+   R_{sale} = c_{(t)} · 2 \frac {litro}{minuto} 
+
+Reemplazamos la definición de :math:`c_{(t)}`:
+
+.. math::
+   :label: def-r-sale-nueva
+
+   R_{sale} = \frac { 2 A_{(t)} }{300 + t} \frac {kg}{minuto}
+
+Por lo que la ecuación diferencial :math:numref:`ec-dif-mod-mat` ahora es:
+
+.. math::
+   :label: ec-dif-mod-mat-nueva
+
+   \frac {dA}{dt} + \frac { 2 A_{(t)} }{300 + t} = 6
+
+Su factor integrante es:
+
+.. math::
+
+   u_{(t)} = e ^ {\int \frac {2}{300 + t} dt}
+
+.. math::
+   :label: factor-integrante-nuevo
+
+   u_{(t)} = (300 + t)^2
+
+
 .. todo::
 
    Resolver último cuestionante
 
+
+.. raw:: html
+   :file: _static/graph-2b.html

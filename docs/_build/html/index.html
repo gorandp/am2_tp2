@@ -674,10 +674,47 @@ formas:</p>
 <li><p><span class="math notranslate nohighlight">\(R_{entra} &gt; R_{sale}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(R_{entra} &lt; R_{sale}\)</span></p></li>
 </ol>
+<p>Para este caso, la forma a tomar es de <span class="math notranslate nohighlight">\(R_{entra} &gt; R_{sale}\)</span>. Por lo
+tanto, supongamos que la solución bien mezclada se bombea hacia afuera con una
+tasa de flujo más lenta de <span class="math notranslate nohighlight">\(2 litro/minuto\)</span> entonces se acumulará en el
+tanque con la razón <span class="math notranslate nohighlight">\(f_{entra} - f_{sale} = (3-2) litro/minuto = 1 kg/minuto\)</span>.</p>
+<p>Después de <span class="math notranslate nohighlight">\(t\)</span> minutos: <span class="math notranslate nohighlight">\((1 litro/minuto) · (t minuto) = t litro\)</span></p>
+<p>Vemos que la cantidad de fluido incrementa con el tiempo, por lo que se
+modificará <a class="reference internal" href="#equation-def-concentracion-tanque">(11)</a> y se vuelve a definir
+<span class="math notranslate nohighlight">\(c_{(t)}\)</span> como:</p>
+<div class="math notranslate nohighlight" id="equation-def-concentracion-tanque-nueva">
+<span class="eqno">(17)<a class="headerlink" href="#equation-def-concentracion-tanque-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[c_{(t)} = \frac { A_{(t)} }{300 + t} \frac {kg}{litro}\]</div>
+<p>Esto también obliga a reescribir <a class="reference internal" href="#equation-def-r-sale">(12)</a>:</p>
+<div class="math notranslate nohighlight">
+\[R_{sale} = c_{(t)} · 2 \frac {litro}{minuto}\]</div>
+<p>Reemplazamos la definición de <span class="math notranslate nohighlight">\(c_{(t)}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-def-r-sale-nueva">
+<span class="eqno">(18)<a class="headerlink" href="#equation-def-r-sale-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{sale} = \frac { 2 A_{(t)} }{300 + t} \frac {kg}{minuto}\]</div>
+<p>Por lo que la ecuación diferencial <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> ahora es:</p>
+<div class="math notranslate nohighlight" id="equation-ec-dif-mod-mat-nueva">
+<span class="eqno">(19)<a class="headerlink" href="#equation-ec-dif-mod-mat-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dA}{dt} + \frac { 2 A_{(t)} }{300 + t} = 6\]</div>
+<p>Su factor integrante es:</p>
+<div class="math notranslate nohighlight">
+\[u_{(t)} = e ^ {\int \frac {2}{300 + t} dt}\]</div>
+<div class="math notranslate nohighlight" id="equation-factor-integrante-nuevo">
+<span class="eqno">(20)<a class="headerlink" href="#equation-factor-integrante-nuevo" title="Enlace permanente a esta ecuación">¶</a></span>\[u_{(t)} = (300 + t)^2\]</div>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Por hacer</p>
 <p>Resolver último cuestionante</p>
 </div>
+<div id="ggb-element-2b"></div>
+
+<script>
+    var params_2b = {
+        "appName": "graphing", "width": 800, "height": 500,
+        "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false,
+        "material_id": "wnay3zb2"
+    };
+    var applet_2b = new GGBApplet(params_2b, true);
+    window.addEventListener("load", function() { 
+        applet_2b.inject('ggb-element-2b');
+    });
+</script>
 </div>
 </div>
 </div>
