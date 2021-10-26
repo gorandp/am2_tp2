@@ -357,6 +357,9 @@ de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?
 Desarrollo
 ----------
 
+Desarrollo (Parte A)
+~~~~~~~~~~~~~~~~~~~~
+
 Sea :math:`A(t)` la cantidad de sal, medida en kilogramos, dentro del tanque
 en el tiempo :math:`t`. Además, el enunciado nos dice que :math:`A(t=0) = 50`.
 También sabemos que :math:`[A(t)] = kg`.
@@ -582,9 +585,20 @@ de :math:`A(t)` para cuando :math:`t \implies \infty`:
    lim_{t \to \infty} A_{(t)} = lim_{t \to \infty} \left( 600 - 550 ·
    e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600
 
+
 .. admonition:: Resultado final
 
    La cantidad de sal en un período largo de tiempo tiende a 600kg
+
+
+Vemos que el gráfico de :math:`A(t)` nos muestra la misma tendencia:
+
+.. raw:: html
+   :file: _static/graph-2.html
+
+
+Desarrollo (Parte B)
+~~~~~~~~~~~~~~~~~~~~
 
 Por último, se pide lo siguiente:
 
@@ -604,15 +618,3 @@ formas:
 
    Resolver último cuestionante
 
-
-Interpretación gráfica
-----------------------
-
-
-.. raw:: html
-   :file: _static/graph-2.html
-
-
-.. todo::
-
-   Agregar comentarios

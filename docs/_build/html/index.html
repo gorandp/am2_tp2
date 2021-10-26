@@ -193,11 +193,18 @@
     <a class="reference internal nav-link" href="#id2">
      Desarrollo
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Interpretación gráfica
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#desarrollo-parte-a">
+       Desarrollo (Parte A)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#desarrollo-parte-b">
+       Desarrollo (Parte B)
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -282,9 +289,9 @@ que postula que la tasa de cambio en la población infectada es proporcional al
 producto del número de ratones que tienen la enfermedad con el número que está
 libre de ésta. Asumiendo que la teoría es correcta, ¿cuánto tiempo le tomará a
 la mitad de la población adquirir la enfermedad?</p>
-<div class="figure align-default" id="id6">
+<div class="figure align-default" id="id4">
 <img alt="Ratones" src="_images/lab_rats.webp" />
-<p class="caption"><span class="caption-text">Imagen ilustrativa. <a class="reference external" href="https://www.criver.com/eureka/the-early-history-of-the-lab-rat">Criver</a></span><a class="headerlink" href="#id6" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-text">Imagen ilustrativa. <a class="reference external" href="https://www.criver.com/eureka/the-early-history-of-the-lab-rat">Criver</a></span><a class="headerlink" href="#id4" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 <div class="section" id="desarrollo">
@@ -461,14 +468,16 @@ tendencia en la cantidad de sal en un período largo de tiempo, y si la hay,
 saber su valor.</p>
 <p>Por ultimo, ¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
 de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?</p>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="_images/tanque.png"><img alt="tanque" src="_images/tanque.png" style="width: 250px;" /></a>
 <p class="caption"><span class="caption-text">Imagen ilustrativa. <cite>Zill y Wright. Ecuaciones Diferenciales con
-problemas con valores en la frontera</cite> (valores editados).</span><a class="headerlink" href="#id7" title="Enlace permanente a esta imagen">¶</a></p>
+problemas con valores en la frontera</cite> (valores editados).</span><a class="headerlink" href="#id5" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>Desarrollo<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="desarrollo-parte-a">
+<h3>Desarrollo (Parte A)<a class="headerlink" href="#desarrollo-parte-a" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(A(t)\)</span> la cantidad de sal, medida en kilogramos, dentro del tanque
 en el tiempo <span class="math notranslate nohighlight">\(t\)</span>. Además, el enunciado nos dice que <span class="math notranslate nohighlight">\(A(t=0) = 50\)</span>.
 También sabemos que <span class="math notranslate nohighlight">\([A(t)] = kg\)</span>.</p>
@@ -634,6 +643,23 @@ e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600\]</div>
 <p class="admonition-title">Resultado final</p>
 <p>La cantidad de sal en un período largo de tiempo tiende a 600kg</p>
 </div>
+<p>Vemos que el gráfico de <span class="math notranslate nohighlight">\(A(t)\)</span> nos muestra la misma tendencia:</p>
+<div id="ggb-element-2"></div>
+
+<script>
+    var params_2 = {
+        "appName": "graphing", "width": 800, "height": 500,
+        "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false,
+        "material_id": "usxceb6v"
+    };
+    var applet_2 = new GGBApplet(params_2, true);
+    window.addEventListener("load", function() { 
+        applet_2.inject('ggb-element-2');
+    });
+</script>
+</div>
+<div class="section" id="desarrollo-parte-b">
+<h3>Desarrollo (Parte B)<a class="headerlink" href="#desarrollo-parte-b" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Por último, se pide lo siguiente:</p>
 <blockquote>
 <div><p>¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
@@ -652,25 +678,6 @@ formas:</p>
 <p class="admonition-title">Por hacer</p>
 <p>Resolver último cuestionante</p>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>Interpretación gráfica<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
-<div id="ggb-element-2"></div>
-
-<script>
-    var params_2 = {
-        "appName": "graphing", "width": 800, "height": 500,
-        "showToolBar": false, "showAlgebraInput": false, "showMenuBar": false,
-        "material_id": "usxceb6v"
-    };
-    var applet_2 = new GGBApplet(params_2, true);
-    window.addEventListener("load", function() { 
-        applet_2.inject('ggb-element-2');
-    });
-</script>
-<div class="admonition-todo admonition" id="id5">
-<p class="admonition-title">Por hacer</p>
-<p>Agregar comentarios</p>
 </div>
 </div>
 </div>
