@@ -306,9 +306,12 @@ ratones libre de la enfermedad.</p>
 número de ratones que tienen la enfermedad con el número que está libre de
 ésta</p>
 </div></blockquote>
+<div class="admonition-modelo-matematico admonition">
+<p class="admonition-title">Modelo matemático</p>
 <p>Lo cual se modeliza con el siguiente modelo matemático:</p>
 <div class="math notranslate nohighlight" id="equation-planteo-ley">
 <span class="eqno">(1)<a class="headerlink" href="#equation-planteo-ley" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dR}{dt} = k R (500 - R)\]</div>
+</div>
 <div class="math notranslate nohighlight" id="equation-var-sep">
 <span class="eqno">(2)<a class="headerlink" href="#equation-var-sep" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {1}{R (500 - R)} dR = k dt\]</div>
 <p>Vemos que la forma tomada en <a class="reference internal" href="#equation-var-sep">(2)</a> es la de una ecuación
@@ -345,10 +348,13 @@ del primer miembro:</p>
 \[\frac {1}{\frac {500}{R} -1} = C e^{500kt}\]</div>
 <div class="math notranslate nohighlight">
 \[\frac {500}{R} = \frac {1}{C e^{500kt}} + 1\]</div>
+<div class="admonition-solucion-general admonition">
+<p class="admonition-title">Solución general</p>
+<p>Despejando <span class="math notranslate nohighlight">\(R(t)\)</span> nos queda la solución general
+a nuestro modelo matemático planteado:</p>
 <div class="math notranslate nohighlight" id="equation-solucion-ratones-general">
 <span class="eqno">(5)<a class="headerlink" href="#equation-solucion-ratones-general" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{(t)} = \frac {500}{ \frac {1}{C e^{500kt}} + 1 }\]</div>
-<p>La ecuación <a class="reference internal" href="#equation-solucion-ratones-general">(5)</a> es la solución general
-a nuestro modelo matemático planteado.</p>
+</div>
 <p>Para calcular <span class="math notranslate nohighlight">\(C\)</span>, traeremos nuevamente la condicion inicial dada
 por el enunciado <span class="math notranslate nohighlight">\(R(t=0) = 5\)</span> y la reemplazamos en
 <a class="reference internal" href="#equation-ecuacion-ratones-practica">(4)</a> por practicidad:</p>
@@ -378,11 +384,13 @@ inicial, por lo que propondremos lo siguiente:</p>
 \[\ln \frac {99}{49} = 2500k\]</div>
 <div class="math notranslate nohighlight">
 \[k = \frac {\ln 99 - \ln 49}{2500} \approx 2.81 \times 10^{-4}\]</div>
-<p>Por lo que <a class="reference internal" href="#equation-solucion-particular-previa-ratones">(6)</a> nos queda:</p>
+<div class="admonition-solucion-particular admonition">
+<p class="admonition-title">Solución particular</p>
+<p>Reemplazando <span class="math notranslate nohighlight">\(k\)</span> en <a class="reference internal" href="#equation-solucion-particular-previa-ratones">(6)</a>
+nos queda la solución particular al modelo matemático planteado inicialmente:</p>
 <div class="math notranslate nohighlight" id="equation-solucion-particular-ratones">
 <span class="eqno">(7)<a class="headerlink" href="#equation-solucion-particular-ratones" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{(t)} = \frac {500}{ \frac {99}{e^{0.1405 t}} + 1 }\]</div>
-<p>La cual, es la solución particular al modelo matemático planteado
-inicialmente.</p>
+</div>
 <p>Ahora solo nos queda averiguar la principal incógnita del problema, en la que
 debemos averiguar para qué valor de <span class="math notranslate nohighlight">\(t\)</span> se cumple que <span class="math notranslate nohighlight">\(R(t)=250\)</span>.
 Reemplazamos esto último en <a class="reference internal" href="#equation-solucion-particular-ratones">(7)</a>:</p>
@@ -535,8 +543,8 @@ de salida de la solución. Estas magnitudes valen <span class="math notranslate 
 (ya que <span class="math notranslate nohighlight">\(\left[ \frac {dA}{dt} \right] = \frac {kg}{minuto}\)</span> ), y por lo
 tanto, para simplificar el cálculo, dejaremos de mencionarlas de ahora en
 más, a no ser que sea necesario explicitarlas. Entonces:</p>
-<div class="admonition-modelo-matematico-del-problema-planteado admonition">
-<p class="admonition-title">Modelo matemático del problema planteado</p>
+<div class="admonition-modelo-matematico admonition">
+<p class="admonition-title">Modelo matemático</p>
 <p>La siguiente ecuación es la <strong>modelización matemática</strong> del
 problema planteado, la cual es una <strong>ecuación diferencial lineal de primer
 orden</strong>.</p>
@@ -701,7 +709,7 @@ modificará <a class="reference internal" href="#equation-def-concentracion-tanq
 <div class="math notranslate nohighlight" id="equation-def-r-sale-nueva">
 <span class="eqno">(18)<a class="headerlink" href="#equation-def-r-sale-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{sale} = \frac { 2 A_{(t)} }{300 + t} \frac {kg}{minuto}\]</div>
 <div class="admonition-modelo-matematico-nuevo admonition">
-<p class="admonition-title">Modelo matemático nuevo</p>
+<p class="admonition-title">Modelo matemático (nuevo)</p>
 <p>La ecuación diferencial <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> ahora es</p>
 <div class="math notranslate nohighlight" id="equation-ec-dif-mod-mat-nueva">
 <span class="eqno">(19)<a class="headerlink" href="#equation-ec-dif-mod-mat-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dA}{dt} + \frac { 2 A_{(t)} }{300 + t} = 6\]</div>
@@ -726,7 +734,7 @@ factor integrante:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}A_{(t)} · (300 + t)^2 = 6 \int (300 + t)^2 dt\\A_{(t)} · (300 + t)^2 = 2 (300 + t)^3 + C\end{aligned}\end{align} \]</div>
 <div class="admonition-solucion-general-nueva admonition">
-<p class="admonition-title">Solución general nueva</p>
+<p class="admonition-title">Solución general (nueva)</p>
 <p>Despejando <span class="math notranslate nohighlight">\(A(t)\)</span>, obtenemos la <strong>solución general</strong></p>
 <div class="math notranslate nohighlight" id="equation-solucion-tanque-general-nueva">
 <span class="eqno">(21)<a class="headerlink" href="#equation-solucion-tanque-general-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[A_{(t)} = 600 + 2t + C · (300 + t)^{-2}\]</div>
@@ -739,7 +747,7 @@ factor integrante:</p>
 <div class="math notranslate nohighlight">
 \[C = - 4.95 · 10^7\]</div>
 <div class="admonition-solucion-particular-nueva admonition">
-<p class="admonition-title">Solución particular nueva</p>
+<p class="admonition-title">Solución particular (nueva)</p>
 <p>Reemplazamos <span class="math notranslate nohighlight">\(C\)</span>  en <a class="reference internal" href="#equation-solucion-tanque-general-nueva">(21)</a> y
 obtenemos la <strong>solución particular</strong></p>
 <div class="math notranslate nohighlight" id="equation-solucion-tanque-particular-nueva">

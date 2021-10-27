@@ -102,12 +102,14 @@ La teoría de difusión de epidemia plantea lo siguiente:
    número de ratones que tienen la enfermedad con el número que está libre de
    ésta
 
-Lo cual se modeliza con el siguiente modelo matemático:
+.. admonition:: Modelo matemático
 
-.. math::
-   :label: planteo-ley
+   Lo cual se modeliza con el siguiente modelo matemático:
 
-   \frac {dR}{dt} = k R (500 - R)
+   .. math::
+      :label: planteo-ley
+
+      \frac {dR}{dt} = k R (500 - R)
 
 .. math::
    :label: var-sep
@@ -187,13 +189,17 @@ Reacomodando:
 
    \frac {500}{R} = \frac {1}{C e^{500kt}} + 1
 
-.. math::
-   :label: solucion-ratones-general
 
-   R_{(t)} = \frac {500}{ \frac {1}{C e^{500kt}} + 1 }
+.. admonition:: Solución general
 
-La ecuación :math:numref:`solucion-ratones-general` es la solución general
-a nuestro modelo matemático planteado.
+   Despejando :math:`R(t)` nos queda la solución general
+   a nuestro modelo matemático planteado:
+
+   .. math::
+      :label: solucion-ratones-general
+
+      R_{(t)} = \frac {500}{ \frac {1}{C e^{500kt}} + 1 }
+
 
 Para calcular :math:`C`, traeremos nuevamente la condicion inicial dada
 por el enunciado :math:`R(t=0) = 5` y la reemplazamos en
@@ -245,15 +251,15 @@ Si esto lo reemplazamos en :math:numref:`ecuacion-ratones-practica`
 
    k = \frac {\ln 99 - \ln 49}{2500} \approx 2.81 \times 10^{-4}
 
-Por lo que :math:numref:`solucion-particular-previa-ratones` nos queda:
+.. admonition:: Solución particular
 
-.. math::
-   :label: solucion-particular-ratones
+   Reemplazando :math:`k` en :math:numref:`solucion-particular-previa-ratones`
+   nos queda la solución particular al modelo matemático planteado inicialmente:
 
-   R_{(t)} = \frac {500}{ \frac {99}{e^{0.1405 t}} + 1 }
+   .. math::
+      :label: solucion-particular-ratones
 
-La cual, es la solución particular al modelo matemático planteado
-inicialmente.
+      R_{(t)} = \frac {500}{ \frac {99}{e^{0.1405 t}} + 1 }
 
 Ahora solo nos queda averiguar la principal incógnita del problema, en la que
 debemos averiguar para qué valor de :math:`t` se cumple que :math:`R(t)=250`.
@@ -446,7 +452,7 @@ Vemos que todos los términos, en ambos miembros, poseen las mismas unidades
 tanto, para simplificar el cálculo, dejaremos de mencionarlas de ahora en
 más, a no ser que sea necesario explicitarlas. Entonces:
 
-.. admonition:: Modelo matemático del problema planteado
+.. admonition:: Modelo matemático
 
    La siguiente ecuación es la **modelización matemática** del
    problema planteado, la cual es una **ecuación diferencial lineal de primer
@@ -652,7 +658,7 @@ Reemplazamos la definición de :math:`c_{(t)}`:
 
    R_{sale} = \frac { 2 A_{(t)} }{300 + t} \frac {kg}{minuto}
 
-.. admonition:: Modelo matemático nuevo
+.. admonition:: Modelo matemático (nuevo)
 
    La ecuación diferencial :math:numref:`ec-dif-mod-mat` ahora es
 
@@ -702,7 +708,7 @@ Integramos ambos miembros:
    A_{(t)} · (300 + t)^2 = 2 (300 + t)^3 + C
 
 
-.. admonition:: Solución general nueva
+.. admonition:: Solución general (nueva)
 
    Despejando :math:`A(t)`, obtenemos la **solución general**
 
@@ -726,7 +732,7 @@ Resolviendo para :math:`A(t=0) = 50`:
    C = - 4.95 · 10^7
 
 
-.. admonition:: Solución particular nueva
+.. admonition:: Solución particular (nueva)
 
    Reemplazamos :math:`C`  en :math:numref:`solucion-tanque-general-nueva` y
    obtenemos la **solución particular**
