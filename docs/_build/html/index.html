@@ -464,10 +464,10 @@ de entrada de sal con la de salida.</p>
 <p>En este caso, la salmuera ingresante tiene una concentración de 2kg/litro de
 sal. El ritmo con que ingresa es de 3 litros/minuto.</p>
 <p>Además de demostrar lo mencionado previamente, se quiere averiguar si hay una
-tendencia en la cantidad de sal en un período largo de tiempo, y si la hay,
-saber su valor.</p>
-<p>Por ultimo, ¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
-de la salmuera ingresante fuera mayor que el flujo de salida de la del tanque?</p>
+tendencia en la cantidad de sal dentro del tanque en un período largo de
+tiempo, y si la hay, saber su valor.</p>
+<p>Por ultimo, ¿Cuánta sal se depositará en en el tanque si el flujo de entrada
+de la salmuera fuera mayor que el flujo de salida de la mezcla?</p>
 <div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="_images/tanque.png"><img alt="tanque" src="_images/tanque.png" style="width: 250px;" /></a>
 <p class="caption"><span class="caption-text">Imagen ilustrativa. <cite>Zill y Wright. Ecuaciones Diferenciales con
@@ -507,13 +507,13 @@ y <span class="math notranslate nohighlight">\(6 \frac {litro}{minuto}\)</span> 
 <p>Como la solución que sale del tanque lo hace con la misma intensidad que con
 la que entra, la cantidad de litros de salmuera en el tanque al tiempo
 <span class="math notranslate nohighlight">\(t\)</span> es una constante de 300 litros.</p>
-<p>Sea <span class="math notranslate nohighlight">\(c_{(t)}\)</span> la concentración de la sal en el tanque así como en el
-flujo de salida, y queda definida de la siguiente manera:</p>
+<p>Sea <span class="math notranslate nohighlight">\(c_{(t)}\)</span> la concentración de la sal en el tanque así como en la
+mezcla de salida, y queda definida de la siguiente manera:</p>
 <div class="math notranslate nohighlight" id="equation-def-concentracion-tanque">
 <span class="eqno">(11)<a class="headerlink" href="#equation-def-concentracion-tanque" title="Enlace permanente a esta ecuación">¶</a></span>\[c_{(t)} = \frac { A_{(t)} }{300} \frac {kg}{litro}\]</div>
 <p>Recordemos que <span class="math notranslate nohighlight">\(A(t)\)</span>  es la <strong>cantidad</strong> de sal dentro del tanque
 en un tiempo <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<p>Luego, la razón de salida <span class="math notranslate nohighlight">\(R_{sale}\)</span>, muy similar a la razón de
+<p>Luego, la razón de salida de sal <span class="math notranslate nohighlight">\(R_{sale}\)</span>, muy similar a la razón de
 entrada, es el producto de la concentración de sal en el tanque y el flujo
 de salida de la solución. Estas magnitudes valen <span class="math notranslate nohighlight">\(c_{(t)}\)</span> y
 <span class="math notranslate nohighlight">\(3 \frac {litro}{minuto}\)</span>, es decir:</p>
@@ -535,11 +535,14 @@ de salida de la solución. Estas magnitudes valen <span class="math notranslate 
 (ya que <span class="math notranslate nohighlight">\(\left[ \frac {dA}{dt} \right] = \frac {kg}{minuto}\)</span> ), y por lo
 tanto, para simplificar el cálculo, dejaremos de mencionarlas de ahora en
 más, a no ser que sea necesario explicitarlas. Entonces:</p>
-<div class="math notranslate nohighlight" id="equation-ec-dif-mod-mat">
-<span class="eqno">(13)<a class="headerlink" href="#equation-ec-dif-mod-mat" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dA}{dt} + \frac { A_{(t)} }{100} = 6\]</div>
-<p>La ecuación <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> es la <strong>modelización matemática</strong> del
+<div class="admonition-modelo-matematico-del-problema-planteado admonition">
+<p class="admonition-title">Modelo matemático del problema planteado</p>
+<p>La siguiente ecuación es la <strong>modelización matemática</strong> del
 problema planteado, la cual es una <strong>ecuación diferencial lineal de primer
 orden</strong>.</p>
+<div class="math notranslate nohighlight" id="equation-ec-dif-mod-mat">
+<span class="eqno">(13)<a class="headerlink" href="#equation-ec-dif-mod-mat" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dA}{dt} + \frac { A_{(t)} }{100} = 6\]</div>
+</div>
 <p>Para encontrar la función solución <span class="math notranslate nohighlight">\(A(t)\)</span> se utiliza método del
 factor integrante. Según <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> se definen:</p>
 <div class="math notranslate nohighlight">
@@ -571,21 +574,27 @@ e^{\frac {t}{100}} dt\]</div>
 <div class="math notranslate nohighlight">
 \[A_{(t)} · e^{\frac {t}{100}} = 600 · e^{\frac {t}{100}} + C\]</div>
 <p>Tal que <span class="math notranslate nohighlight">\(C\)</span> es una constante de integración.</p>
+<div class="admonition-solucion-general admonition">
+<p class="admonition-title">Solución general</p>
 <p>Por último, despejando <span class="math notranslate nohighlight">\(A(t)\)</span>, obtenemos la <strong>solución general</strong> de la
 ecuación diferencial ordinaria de primer orden:</p>
 <div class="math notranslate nohighlight" id="equation-solucion-tanque-general">
 <span class="eqno">(15)<a class="headerlink" href="#equation-solucion-tanque-general" title="Enlace permanente a esta ecuación">¶</a></span>\[A_{(t)} = 600 + C · e^{\frac {-t}{100}}\]</div>
+</div>
 <p>Por la condición inicial dada en el enunciado, sabemos que <span class="math notranslate nohighlight">\(A(t=0) = 50\)</span>.
 Sustituimos esta condición inicial en <a class="reference internal" href="#equation-solucion-tanque-general">(15)</a>:</p>
 <div class="math notranslate nohighlight">
 \[50 = 600 + C · e^{\frac {0}{100}}\]</div>
 <div class="math notranslate nohighlight">
 \[-550 = C · 1 \implies C = -550\]</div>
-<p>Reemplazamos en <a class="reference internal" href="#equation-solucion-tanque-general">(15)</a>:</p>
+<div class="admonition-solucion-particular admonition">
+<p class="admonition-title">Solución particular</p>
+<p>Reemplazamos <span class="math notranslate nohighlight">\(C\)</span>  en <a class="reference internal" href="#equation-solucion-tanque-general">(15)</a> y
+obtenemos la <strong>solución particular</strong> de nuestro modelo planteado
+inicialmente:</p>
 <div class="math notranslate nohighlight" id="equation-solucion-tanque-particular">
 <span class="eqno">(16)<a class="headerlink" href="#equation-solucion-tanque-particular" title="Enlace permanente a esta ecuación">¶</a></span>\[A_{(t)} = 600 - 550 · e^{\frac {-t}{100}}\]</div>
-<p>Y obtenemos <a class="reference internal" href="#equation-solucion-tanque-particular">(16)</a> que es la <strong>solución
-particular</strong> de nuestro modelo planteado inicialmente.</p>
+</div>
 <p>Ahora, resolveremos la primer incógnita de nuestro problema, y es, si hay o no
 una tendencia en la cantidad de sal depositada pasado un período largo de
 tiempo. Para esto observamos la cantidad de sal depositada en el tanque para
@@ -639,8 +648,8 @@ de <span class="math notranslate nohighlight">\(A(t)\)</span> para cuando <span 
 <div class="math notranslate nohighlight">
 \[lim_{t \to \infty} A_{(t)} = lim_{t \to \infty} \left( 600 - 550 ·
 e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600\]</div>
-<div class="admonition-resultado-final admonition">
-<p class="admonition-title">Resultado final</p>
+<div class="admonition-respuesta-final admonition">
+<p class="admonition-title">Respuesta final</p>
 <p>La cantidad de sal en un período largo de tiempo tiende a 600kg</p>
 </div>
 <p>Vemos que el gráfico de <span class="math notranslate nohighlight">\(A(t)\)</span> nos muestra la misma tendencia:</p>
@@ -662,38 +671,42 @@ e^{\frac {-t}{100}} \right) = 600 - \frac {500}{\infty} = 600\]</div>
 <h3>Desarrollo (Parte B)<a class="headerlink" href="#desarrollo-parte-b" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Por último, se pide lo siguiente:</p>
 <blockquote>
-<div><p>¿Cuánta sal se depositará en en el tanque si el ritmo de entrada
-de la salmuera ingresante fuera mayor que el flujo de salida de la del
-tanque?</p>
+<div><p>¿Cuánta sal se depositará en en el tanque si el flujo de entrada
+de la salmuera fuera mayor que el flujo de salida de la mezcla?</p>
 </div></blockquote>
 <p>En el análisis que conduce a la ecuación <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> se tomo
-la relación <span class="math notranslate nohighlight">\(R_{entra} = R_{sale}\)</span>, pero esta relación puede ser de 3
-formas:</p>
+que <span class="math notranslate nohighlight">\(r_{entra} = r_{sale}\)</span> (es decir, que la tasa de entrada y salida de
+líquido era la misma), pero esta relación puede ser de 3 formas:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(R_{entra} = R_{sale}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(R_{entra} &gt; R_{sale}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(R_{entra} &lt; R_{sale}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_{entra} = r_{sale}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_{entra} &gt; r_{sale}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_{entra} &lt; r_{sale}\)</span></p></li>
 </ol>
-<p>Para este caso, la forma a tomar es de <span class="math notranslate nohighlight">\(R_{entra} &gt; R_{sale}\)</span>. Por lo
-tanto, supongamos que la solución bien mezclada se bombea hacia afuera con una
-tasa de flujo más lenta de <span class="math notranslate nohighlight">\(2 litro/minuto\)</span> entonces se acumulará en el
-tanque con la razón <span class="math notranslate nohighlight">\(f_{entra} - f_{sale} = (3-2) litro/minuto = 1 kg/minuto\)</span>.</p>
-<p>Después de <span class="math notranslate nohighlight">\(t\)</span> minutos: <span class="math notranslate nohighlight">\((1 litro/minuto) · (t minuto) = t litro\)</span></p>
-<p>Vemos que la cantidad de fluido incrementa con el tiempo, por lo que se
+<p>Para este caso, la forma a tomar es de <span class="math notranslate nohighlight">\(r_{entra} &gt; r_{sale}\)</span>.</p>
+<p>Entonces supongamos que la solución mezclada se bombea hacia afuera con una
+tasa de flujo de mezcla más lenta de <span class="math notranslate nohighlight">\(2 litro/minuto\)</span>, por lo que se
+acumulará en el tanque con la razón
+<span class="math notranslate nohighlight">\(r_{entra} - r_{sale} = (3-2) litro/minuto = 1 litro/minuto\)</span>.</p>
+<p>Si evaluamos el líquido dentro del tanque después de <span class="math notranslate nohighlight">\(t\)</span> minutos será:
+<span class="math notranslate nohighlight">\(1 \frac {litro}{minuto} · t · minuto = t · litro\)</span></p>
+<p>Vemos que la cantidad de fluido incrementa con el tiempo, por lo que
 modificará <a class="reference internal" href="#equation-def-concentracion-tanque">(11)</a> y se vuelve a definir
 <span class="math notranslate nohighlight">\(c_{(t)}\)</span> como:</p>
 <div class="math notranslate nohighlight" id="equation-def-concentracion-tanque-nueva">
 <span class="eqno">(17)<a class="headerlink" href="#equation-def-concentracion-tanque-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[c_{(t)} = \frac { A_{(t)} }{300 + t} \frac {kg}{litro}\]</div>
 <p>Esto también obliga a reescribir <a class="reference internal" href="#equation-def-r-sale">(12)</a>:</p>
 <div class="math notranslate nohighlight">
-\[R_{sale} = c_{(t)} · 2 \frac {litro}{minuto}\]</div>
+\[R_{sale} = c_{(t)} · r_{sale} = c_{(t)} · 2 \frac {litro}{minuto}\]</div>
 <p>Reemplazamos la definición de <span class="math notranslate nohighlight">\(c_{(t)}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-def-r-sale-nueva">
 <span class="eqno">(18)<a class="headerlink" href="#equation-def-r-sale-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[R_{sale} = \frac { 2 A_{(t)} }{300 + t} \frac {kg}{minuto}\]</div>
-<p>Por lo que la ecuación diferencial <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> ahora es:</p>
+<div class="admonition-modelo-matematico-nuevo admonition">
+<p class="admonition-title">Modelo matemático nuevo</p>
+<p>La ecuación diferencial <a class="reference internal" href="#equation-ec-dif-mod-mat">(13)</a> ahora es</p>
 <div class="math notranslate nohighlight" id="equation-ec-dif-mod-mat-nueva">
 <span class="eqno">(19)<a class="headerlink" href="#equation-ec-dif-mod-mat-nueva" title="Enlace permanente a esta ecuación">¶</a></span>\[\frac {dA}{dt} + \frac { 2 A_{(t)} }{300 + t} = 6\]</div>
-<p>Su factor integrante es:</p>
+</div>
+<p>Aplicando el mismo método de resolución, vemos que su factor integrante es:</p>
 <div class="math notranslate nohighlight">
 \[u_{(t)} = e ^ {\int \frac {2}{300 + t} dt}\]</div>
 <div class="math notranslate nohighlight" id="equation-factor-integrante-nuevo">
