@@ -309,6 +309,9 @@ el valor de :math:`k`. Al variar :math:`b_y` se consigue cambiar el valor de
 .. raw:: html
    :file: _static/graph-1.html
 
+|
+|
+
 Vemos que el valor de :math:`t` en :math:`R(t)=250` es ligeramente distinto al
 calculado en el desarrollo, esto se debe a que hubo un error de redondeo cuando
 se calculó :math:`k` en el desarrollo, si se hubieran mantenido las expresiones
@@ -323,6 +326,8 @@ las trazas dada por los vectores del campo descripto por la solución general.
 .. raw:: html
    :file: _static/graph-1b.html
 
+|
+|
 
 Ejercicio 2
 ===========
@@ -764,6 +769,25 @@ tanque. Si calculamos su límite:
    La cantidad de sal en un período prolongado de tiempo tiende a infinito
    cuando el flujo de entrada de la salmuera es mayor que el flujo de salida
    de la mezcla.
+
+
+Información adicional
+=====================
+
+- Editor de código: `Visual Studio Code <https://code.visualstudio.com/>`_
+- Control de versiones: `Git <https://git-scm.com/>`_
+- Repositorio remoto: `Github <https://github.com/>`_
+
+  - `Repositorio de este TP <https://github.com/gorandp/am2_tp2>`_
+
+- Herramienta para generar documentación:
+  `Sphinx <https://www.sphinx-doc.org/en/master/>`_
+
+  - Tema usado: `Book <https://sphinx-themes.org/sample-sites/sphinx-book-theme/>`_
+
+- Hosting: `Cloudflare Pages <https://pages.cloudflare.com/>`_
+- Grabación video: `OBS Studio <https://obsproject.com/>`_
+- Edición video: `Open Shot <https://www.openshot.org/>`_
 
 |
 |
