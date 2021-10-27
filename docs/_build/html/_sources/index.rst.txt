@@ -786,6 +786,7 @@ Información adicional
   - Tema usado: `Book <https://sphinx-themes.org/sample-sites/sphinx-book-theme/>`_
 
 - Hosting: `Cloudflare Pages <https://pages.cloudflare.com/>`_
+- Gráficas: `Geogebra <https://www.geogebra.org/>`_
 - Grabación video: `OBS Studio <https://obsproject.com/>`_
 - Edición video: `Open Shot <https://www.openshot.org/>`_
 
