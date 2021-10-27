@@ -517,7 +517,7 @@ Tal que :math:`C` es una constante de integración.
 .. admonition:: Solución general
 
    Por último, despejando :math:`A(t)`, obtenemos la **solución general** de la
-   ecuación diferencial ordinaria de primer orden:
+   ecuación diferencial lineal de primer orden:
 
    .. math::
       :label: solucion-tanque-general
@@ -672,11 +672,87 @@ Aplicando el mismo método de resolución, vemos que su factor integrante es:
 
    u_{(t)} = (300 + t)^2
 
+Luego multiplicamos ambos miembros de :eq:`ec-dif-mod-mat-nueva` por el
+factor integrante:
 
-.. todo::
+.. math::
 
-   Resolver último cuestionante
+   \frac {dA}{dt} · u_{(t)} + \frac { 2 A_{(t)} }{300 + t} u_{(t)} = 6 u_{(t)}
 
+.. math::
+
+   \frac {dA}{dt} · (300 + t)^2 + \frac { 2 A_{(t)} }{300 + t} (300 + t)^2 = 6 (300 + t)^2
+
+.. math::
+
+   \frac {dA}{dt} · (300 + t)^2 + 2 A_{(t)} · (300 + t) = 6 (300 + t)^2
+
+Vemos que el primer miembro se puede reescribir de la siguiente manera:
+
+.. math::
+
+   \frac {d}{dt} (A_{(t)} · (300 + t)^2) = 6 (300 + t)^2
+
+Integramos ambos miembros:
+
+.. math::
+
+   A_{(t)} · (300 + t)^2 = 6 \int (300 + t)^2 dt
+
+   A_{(t)} · (300 + t)^2 = 2 (300 + t)^3 + C
+
+
+.. admonition:: Solución general nueva
+
+   Despejando :math:`A(t)`, obtenemos la **solución general**
+
+   .. math::
+      :label: solucion-tanque-general-nueva
+
+      A_{(t)} = 600 + 2t + C · (300 + t)^{-2}
+
+Resolviendo para :math:`A(t=0) = 50`:
+
+.. math::
+
+   50 = 600 + 0 + C · (300 + 0)^{-2}
+
+.. math::
+
+   -550 · 300^2 = C
+
+.. math::
+
+   C = - 4.95 · 10^7
+
+
+.. admonition:: Solución particular nueva
+
+   Reemplazamos :math:`C`  en :math:numref:`solucion-tanque-general-nueva` y
+   obtenemos la **solución particular**
+
+   .. math::
+      :label: solucion-tanque-particular-nueva
+
+      A_{(t)} = 600 + 2t - 4.95 · 10^7 · (300 + t)^{-2}
+
+Graficamos esta solución particular y su correspondiente campo vectorial
+de la solución general.
 
 .. raw:: html
    :file: _static/graph-2b.html
+
+Como era de esperar, se muestra que con el tiempo se acumula la sal en el
+tanque. Si calculamos su límite:
+
+.. math::
+
+   lim_{t \to \infty} A_{(t)} = lim_{t \to \infty} \left( 600 + 2t - 4.95 ·
+   10^7 · (300 + t)^{-2} \right) = 600 + \infty + 0 = \infty
+
+
+.. admonition:: Respuesta final
+
+   La cantidad de sal en un período prolongado de tiempo tiende a infinito
+   cuando el flujo de entrada de la salmuera es mayor que el flujo de salida
+   de la mezcla.
