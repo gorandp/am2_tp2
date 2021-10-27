@@ -111,13 +111,15 @@ La teoría de difusión de epidemia plantea lo siguiente:
 
       \frac {dR}{dt} = k R (500 - R)
 
-.. math::
-   :label: var-sep
+   O también:
 
-   \frac {1}{R (500 - R)} dR = k dt
+   .. math::
+      :label: var-sep
 
-Vemos que la forma tomada en :math:numref:`var-sep` es la de una ecuación
-diferencial ordinaria de primer orden a variable separables.
+      \frac {1}{R (500 - R)} dR = k dt
+
+   Vemos que la forma tomada es la de una **ecuación diferencial ordinaria de
+   primer orden a variable separables**.
 
 Para resolverla, primero descomponemos en fracciones simples la fracción
 del primer miembro:
