@@ -756,3 +756,7 @@ tanque. Si calculamos su límite:
    La cantidad de sal en un período prolongado de tiempo tiende a infinito
    cuando el flujo de entrada de la salmuera es mayor que el flujo de salida
    de la mezcla.
+
+|
+|
+|

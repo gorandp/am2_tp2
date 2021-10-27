@@ -18,10 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Trabajo Practico 2'
-# copyright = '2021, Goran Prpic, Pablo Usero, Santiago Asenjo'
-# author = 'Goran Prpic, Pablo Usero, Santiago Asenjo'
-html_show_copyright = False
-show_authors = False
+copyright = '2021, Goran Prpic, Pablo Usero, Santiago Asenjo'
+author = 'Goran Prpic, Pablo Usero, Santiago Asenjo'
 
 
 # -- General configuration ---------------------------------------------------
