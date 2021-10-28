@@ -401,7 +401,7 @@ Donde:
 A su vez, :math:`R_{entra}`, que se mide en :math:`\frac {kg}{minuto}`, es el
 producto de la concentración de la afluencia de sal y la tasa de flujo de
 fluido. Ambas magnitudes, según el enunciado, valen :math:`2 \frac {kg}{litro}`
-y :math:`6 \frac {litro}{minuto}` respectivamente, entonces:
+y :math:`3 \frac {litro}{minuto}` respectivamente, entonces:
 
 .. math::
    :label: def-r-entra
@@ -787,6 +787,17 @@ Información adicional
 
 - Hosting: `Cloudflare Pages <https://pages.cloudflare.com/>`_
 - Gráficas: `Geogebra <https://www.geogebra.org/>`_
+
+  - Problema 1:
+
+    - Gráfico 1: https://www.geogebra.org/m/hskbkeyv
+    - Gráfico 2: https://www.geogebra.org/m/qaebxzn8
+
+  - Problema 2:
+
+    - Parte A: https://www.geogebra.org/m/usxceb6v
+    - Parte B: https://www.geogebra.org/m/wnay3zb2
+
 - Grabación video: `OBS Studio <https://obsproject.com/>`_
 - Edición video: `Open Shot <https://www.openshot.org/>`_
 
