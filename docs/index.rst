@@ -10,7 +10,7 @@ Trabajo Práctico 2
 
 **Materia**: Análisis Matemático 2
 
-**Fecha**: 30-10-2021
+**Fecha**: 31-10-2021
 
 
 Alumnos
