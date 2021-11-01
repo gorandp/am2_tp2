@@ -21,6 +21,15 @@ Alumnos
 - Santiago Asenjo. Ingeniería Electrónica.
 
 
+Video
+-----
+
+La explicación de este TP en video, pedido como parte de la consigna está
+subido en Youtube al siguiente link:
+
+https://youtu.be/CYrv6CWdzLc
+
+
 Consigna
 --------
 
@@ -801,6 +810,36 @@ Información adicional
 - Grabación video: `OBS Studio <https://obsproject.com/>`_
 - Edición video: `Open Shot <https://www.openshot.org/>`_
 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 |
 |
 |

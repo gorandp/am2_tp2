@@ -10,7 +10,7 @@ Trabajo Práctico 2
 
 **Materia**: Análisis Matemático 2
 
-**Fecha**: 30-10-2021
+**Fecha**: 31-10-2021
 
 
 Alumnos
@@ -19,6 +19,15 @@ Alumnos
 - Goran Prpic. Ingeniería Electrónica.
 - Pablo Usero. Ingeniería Mecánica.
 - Santiago Asenjo. Ingeniería Electrónica.
+
+
+Video
+-----
+
+La explicación de este TP en video, pedido como parte de la consigna está
+subido en Youtube al siguiente link:
+
+https://youtu.be/CYrv6CWdzLc
 
 
 Consigna
@@ -801,6 +810,36 @@ Información adicional
 - Grabación video: `OBS Studio <https://obsproject.com/>`_
 - Edición video: `Open Shot <https://www.openshot.org/>`_
 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 |
 |
 |
